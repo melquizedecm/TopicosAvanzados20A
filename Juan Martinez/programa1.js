@@ -9,11 +9,11 @@
 }*/
 
 function encender(){
-  var motor = document.getElementById("motor");
-  motor.innerhtml= <img src="https://i1.wp.com/i3.8000vueltas.com/2007/07/4cyl-animation.gif"> ;
+  var motor = document.getElementbyId("motor");
+  motor.innerHTML= "<img src='https://i1.wp.com/i3.8000vueltas.com/2007/07/4cyl-animation.gif'>";
 }
 
 function apagar(){
-  var motor = document.getElementById("motor");
-  motor.innerhtml= <img src="C:\xampp\htdocs\TAP\TopicosAvanzados20A\Juan Martinez\motor.png"> ;
+  var motor = document.getElementbyId("motor");
+  motor.innerHTML= "<img src='C:/xampp/htdocs/TAP/TopicosAvanzados20A/Juan Martinez/motor.png'>" ;
 }
