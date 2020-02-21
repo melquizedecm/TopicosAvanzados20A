@@ -6,11 +6,44 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Nombre</title>
+        <title>Programa UNO</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- DE ESTA MANERA SE PUEDE PONER UN SCRIPT DIRECTO EN EL HTML
+        <script lang="JavaScript"> 			//Se pone el codigo que quieras poner de JavaScript
+        	function mensaje(){
+        		alert("Hola Mundo");
+        	}
+
+        </script>
+    	-->
+
+    	<!--AQUI SE PONE EL ARCHIVO APARTE CON TODOS LOS SCRIPTS-->
+    	<script src="ProgramaUNO.js">
+    		
+    	</script>
     </head>
-    <body>
-        <H1>Isaac Puc Lopez</H1>
+
+
+
+
+
+
+
+
+    <body >		<!--Para que se muestre cuando empiece a cargar la pagina-->
+        <div>
+        	
+        		<!--<input type="text" onkeydown="alert('presionaste..')" onkeyup="mensaje();">-->
+
+        		<button onclick="encender()" >Encender Motor</button>
+        		<button onclick="apagar()" >Apagar Motor</button>
+
+        	
+        </div>
+        <div id="motor">
+        	
+        </div>
+
     </body>
 </html>
