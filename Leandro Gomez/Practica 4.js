@@ -1,4 +1,4 @@
-
+// Promedio de calificaciones
 var Cant= prompt ("Escriba la cantidad de calificaciones");
 var Calificaciones= 0;
 var Sum= 0;
