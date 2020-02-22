@@ -1,12 +1,5 @@
-/*
-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*Source: Programa6.js
-*Description: Validar Inputs
-*Tomando valores de los input y realizado
-*Date: 20/02/2020
-*Author: Lizzie Medina Cetina
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*/
+
+
 function calcularIva(){
 	//obtener los valores de los input.
 	var valor=document.getElementById('inputValor').value;
