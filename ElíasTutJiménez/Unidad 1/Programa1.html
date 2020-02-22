@@ -9,13 +9,15 @@ and open the template in the editor.
         <title>Programa 1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-        	function mensaje(){
-        		alert("Hola Mundo");
-        	}
-        </script>	
+        <script src="Programa1.js"></script>	
     </head>
-    <body onload="mensaje();">
-        <div>Elías Tut Jiménez</div>
+    <body>
+        <div>
+        		<button onclick ="encender();"> Enciende el Motor </button>
+        		<button onclick ="apagar();"> Apagar el Motor </button>
+        </div>
+        <div id="motor">
+        </div>
+
     </body>
 </html>
