@@ -1,3 +1,11 @@
+/*
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Source: Programa6.js
+*Description: Input Valores Calculo de IVA.
+*Date: 14/02/2020
+*Author: Miguel Angel Pech Mena
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
 function calculaIva(){
   var valor= document.getElementById('inputValor').value;
   var iva= document.getElementById('inputIVA').value;

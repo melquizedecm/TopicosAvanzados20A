@@ -1,8 +1,12 @@
 /*
-*Source: programa1
-*Description: funciones iniciales en js
-*
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Source: Programa1.js
+*Description: Endendido/Apagado.
+*Date: 13/02/2020
+*Author: Miguel Angel Pech Mena
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
+
 
 /*function mensaje(){
   alert("hola mundo");
