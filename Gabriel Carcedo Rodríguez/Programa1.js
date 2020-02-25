@@ -1,13 +1,13 @@
 /*
  ************************************** 
  *Source: Programa1.js
- *Description: Initial Functions in JS
- *Start engine/Turn down engine
+ *Description: Initial Functions in JS: Start engine/Turn down engine
  *Date: 07/Feb/2020
  *Author: Gabriel Carcedo Rodríguez
  **************************************
  */
 
+//CREACIÓN DE LAS FUNCIONES (ENCENDER Y APAGAR) Y DEFINIR LO QUE REALIZARÁN
 function Encender()
 {
     var motor = document.getElementById("motor");
