@@ -1,25 +1,24 @@
 /*
 * Source:         Program6.html
-* Description:    Validar Imputs
-* Tomando valores de los Imput y realizando operaciones
+* Description:    Validar Inputs
+* Tomando valores de los Input y realizando operaciones
 * Date:           20/Feb/20
 * Author:         González Gómez Leandro
 */
-function CalcularIva(){
+function calculaIva(){
+  //obtener los valores de los input
+  var Valor=document.getElementById('inputValor').value;
+  var Iva=document.getElementById('inputIva').value; //jalar el valor del iva
 
-  var Valor=document.getElementById('InputValor').value;
-  var Iva=document.getElementById('inputIva').value;
+  //Validar los valores de los input
+  if (isNaN(Valor) || isNaN(Iva)) {
+    alert("No es nuemrico el valor");
 
-
-  if(isNaN(Valor) || isNaN(Iva)){
-    alert("No es numérico el valor");
-    document.getElementById('inputValor').value;
   }else {
     Valor=parseFloat(Valor);
-    Iva=parseFloat(Iva);
+    Iva=parseFloat(Iva)
   }
-
+  //imprimir los resultados
   var Total=((Valor*Iva)/100)+Valor;
-  document.getElementById('inputTotal').value=Total;
-
+  document.getElementById('inputTotal').value=Total; //get el control entero
 }
