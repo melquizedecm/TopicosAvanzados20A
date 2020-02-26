@@ -1,11 +1,7 @@
-/*
-****************************************
-*Source:Programa1.js
-*Description: Funciones iniciales en JS
-*Encender un motor / Apagar motor
-*Date: 12/Feb/2020
-*Author: Ivan Alejandro Arias Escobar
-****************************************
+/* *Source:Programa1.js 
+*Description: Funciones iniciales en JS *Encender un motor / Apagar motor 
+*Date: 7/Feb/2020
+*Author: Ivan Alejandro Arias Escobar 
 */
 
 function mensaje(){
