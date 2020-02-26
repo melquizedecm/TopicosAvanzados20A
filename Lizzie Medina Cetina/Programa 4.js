@@ -7,7 +7,8 @@
 
 // Se indican cuantas calificaciones se van a leer.
 var Cantidad= prompt ("Escriba el número de calificaciones");
-var Cali= 0, Suma= 0;
+var Cali= 0;
+var Suma= 0;
 var Promedio;
 //Entran las calificaciones Y despues estás van al sumador.
 for (var i = 0; i < Cantidad; i++) 
@@ -16,5 +17,5 @@ for (var i = 0; i < Cantidad; i++)
     Suma= Suma + Cali;
 }
 //Se tiene el rpomedio de las calificaciones y lo muestra en pantalla.
-Prom  = Suma / Cantidad;
+Promedio  = Suma / Cantidad;
 alert("El promedio es: " + Promedio);
