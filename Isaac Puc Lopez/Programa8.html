@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Source:         Programa8.html
+Description:    Uso de timers
+Date:           21/Feb/20
+Author:         Isaac Puc López
+-->
+
+<html>
+    <head>
+        <title>Programa 8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+          function test(){
+            setTimeout(function(){    //Funcion anónima, se crea al momento y se declara
+              alert("Ya pasaron tres segundos");
+            }, 3000);         //Tiempo con base en milisegundos 
+          }
+        </script>
+    </head>
+
+    <body onload="test()"> <!--Al cargarse la pagina se ejecuta la funcion anteriror "test" que al pasar 3 segundos aparece un alert-->
+
+    </body>
+</html>

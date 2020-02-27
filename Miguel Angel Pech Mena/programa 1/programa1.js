@@ -19,5 +19,5 @@ function encender(){
 
 function apagar(){
   var motor = document.getElementById("motor");
-  motor.innerHTML= "<img src='C:/xampp/htdocs/SistemaKaraoke/TopicosAvanzados20A/Miguel%20Angel%20Pech%20Mena/motor.png'>" ;
+  motor.innerHTML= "<img src='C:/xampp/htdocs/SistemaKaraoke/TopicosAvanzados20A/Miguel%20Angel%20Pech%20Mena/programa%201/motor.png'>" ;
 }

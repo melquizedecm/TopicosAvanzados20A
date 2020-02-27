@@ -1,4 +1,11 @@
-
+/*
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Source: Programa6.js
+*Description: Programa que calcula el Iva.
+*Date: 21/Feb/2020
+*Author: Lizzie Medina Cetina
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
 
 function calcularIva(){
 	//obtener los valores de los input.

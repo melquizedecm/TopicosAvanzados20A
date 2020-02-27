@@ -1,11 +1,12 @@
 
 //Source:         Programa2.html
-//Description:    Sumar calificaciones.
+//Description:    Sumar calificaciones y realizar las validaciones correspondientes.
 //Date:           14/Feb/20
 //Author:        Lizzie Medina Cetina 
 
  
 //Validaciones
+//Registra 2 calificaciones y las suma si son números.
 
 var calificacion1= prompt("Escribe una calificacion  numerica");
 var calificacion2= prompt("Escribe una calificacion  numerica");
