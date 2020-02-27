@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Sorce: Programa8
+Description: Nameless Function and his posible works
+Date: 21/Feb/2020
+Author: Gabriel Carcedo Rodríguez
+-->
+<html>
+    <head>
+    	<title>Programa8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CREACIÓN DE UNA FUNCIÓN ANÓNIMA-->
+        <script>
+        	function test()
+        	{
+        		setTimeout(function()
+        		{
+        			alert("Han pasado 3 seg");
+        		}, 3000);
+        	}
+        	function test2()
+        	{
+        		setInterval(function()
+        		{
+        			alert("Otros 3 seg");
+        		}, 3000);
+        	}
+        </script>
+    </head>
+    <!--LLAMADA A LA FUNCIÓN-->
+    <body onload="test2()">
+    </body>
+</html>
