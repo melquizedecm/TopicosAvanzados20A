@@ -12,6 +12,5 @@
       <input type="submit" name="" value="verificar">
 
     </form>
-
   </body>
 </html>
