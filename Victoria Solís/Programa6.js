@@ -3,7 +3,7 @@
 *description: Validar inputs
 *tomando valores de los input y realizando operaciones
 *date: 20/feb/2020
-*author: Carlos Gio Rivas
+*author: Victoria Solís
 */
 
 function calculaIva(){
