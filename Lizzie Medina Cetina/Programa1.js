@@ -7,11 +7,13 @@
 *Author: Lizzie Medina Cetina
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-
+//Enciende el motor 
 function encender(){
           var motor=document.getElementById("motor");
           motor.innerHTML="<img src='https://i1.wp.com/i3.8000vueltas.com/2007/07/4cyl-animation.gif'>";
         	}
+
+        	//Apaga el motor
 
         	function apagar (){
           var motor=document.getElementById("motor");
