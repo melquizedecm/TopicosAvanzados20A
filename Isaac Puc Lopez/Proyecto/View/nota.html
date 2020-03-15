@@ -9,7 +9,12 @@
 		<title>La Pirámide| Notas</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+        <script src="nota.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+	
 	</head>
 	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
@@ -25,7 +30,7 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="index.html">Inicio</a></li>
-								<li class="current"><a href="nota.html">Generar nota</a></li>
+								<li class="current"><a href="nota.html">Nota</a></li>
 								<li><a href="grafica.html">Kilos lavados (Gráfica)</a></li>
 								<li><a href="contacto.html">Contactanos</a></li>
 								<li><a href="#">Cerrar Sesión</a></li>
@@ -39,9 +44,14 @@
 					<div class="container">
 
 						<!-- Content -->
-							<p>AQUI VA LA INFO DEL LAS NOTAS</p>
-							<p>AQUI VA LA INFO DEL LAS NOTAS</p>
-							<p>AQUI VA LA INFO DEL LAS NOTAS</p>
+						     <p>Nombre:<input type="text" id="Texto" name="Write Something"></p>
+                             <p>Correo:<input type="text" id="Texto2" name="Write Something"></p>
+                             <p>Número:<input type="text" id="Texto3" name="Write Something"></p>
+                             <p>Servicio:<input type="text" id="Texto4" name="Write Something"></p>
+                             <p>KL:<input type="text" id="Texto5" name="Write Something"></p>
+                             <p>Extra:<input type="text" id="Texto6" name="Write Something"></p>
+                             <p><button type="Submit" onclick="crear()">Generar PDF</button></p>
+							  
 
 					</div>
 				</section>
