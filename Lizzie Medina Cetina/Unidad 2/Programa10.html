@@ -1,0 +1,41 @@
+<!--
+Source:         Programa8.html
+Description:    Mostrar un intervalo de tiempo recorrido al ejecutar el programa.
+Date:           21/Feb/20
+Author:        Lizzie Medina Cetina -->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Calificaciones de tercer semestre   Lizzie Medina Cetina"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 95, label: "Estructura de datos"},
+			{y: 77, label: "Física"},
+			{y: 99, label: "Investigación de operaciones"},
+			{y: 90, label: "Estructtura de datos"},
+			{y: 95, label: "Desarrollo Sustentable"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

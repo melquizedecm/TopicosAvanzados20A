@@ -1,3 +1,8 @@
+<!--
+Source:         Programa9.html
+Description:    Realización de datatables.
+Date:           21/Feb/20
+Author:        Lizzie Medina Cetina -->
 <html>
 <head>
     	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -5,23 +10,15 @@
       <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
       <script>
         $(document).ready(function() {
-    var table = $('#example').DataTable( {
-        "ajax": "../ajax/data/objects.txt",
-        "columns": [
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": ''
-            },
-            { "data": "name" },
-            { "data": "position" },
-            { "data": "office" },
-            { "data": "salary" }
-        ],
-        "order": [[1, 'asc']]
-    } );
-     
+              $('#example').DataTable({ 
+              	"order": [[5,"asc"]],
+              	"columnDefs":[{
+                     "targets":[2],
+                     "searchab":false
+              	}]
+              	
+              });
+        });
       </script>
 
         <title>TODO supply a title</title>
