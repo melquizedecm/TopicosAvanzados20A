@@ -2,15 +2,28 @@ function crear(){
 
 var doc = new jsPDF()
 
-
+//Texto introducido
+var Nombre=document.getElementById("Texto").value;
+var Correo=document.getElementById("Texto2").value;
+var Numero=document.getElementById("Texto3").value;
+var Servicio=document.getElementById("Texto4").value;
+var kl=document.getElementById("Texto5").value;
+var Extra=document.getElementById("Texto6").value;
 //Texto predetiminado
+doc.text(100,20, "Nota")
 doc.text(30,35, "Nombre:")
 doc.text(30,40, "Correo:")
 doc.text(30,45, "Número:")
 doc.text(30,53, "Servicio:")
 doc.text(30,80, "Kilos:")
 doc.text(30,88, "Extra:")
-
+//Posicion del texto introducido
+doc.text(70,35,Nombre)
+doc.text(70,40,Correo)
+doc.text(70,45,Numero)
+doc.text(70,53,Servicio)
+doc.text(70,80,kl)
+doc.text(70,88,Extra)
 
 //Nota
 doc.line(30, 30, 180, 30)//Linea horizontal
