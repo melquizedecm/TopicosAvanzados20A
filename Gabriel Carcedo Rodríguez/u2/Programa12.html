@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+		<!-- jQuery library -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jsPDF library -->
+		<script src="js/jsPDF/dist/jspdf.min.js"></script>
+    <script src="programa12.js"></script>
+
+		<title>Formulario PDF</title>
+  </head>
+  <body>
+		<div id="content">
+			<h2>Minuta de Reunión</h2>
+			<h4>Nombre de Equipo</h4>
+			<input type="text" id="equipo" name="equipo" value="" placeholder="Nombre del Equipo">
+			<br>
+			<h4>Integrantes</h4>
+			<input type="text" id="nombre1" name="nombre1" value="" placeholder="Integrante 1">
+			<input type="text" id="nombre2" name="nombre2" value="" placeholder="Integrante 2">
+			<input type="text" id="nombre3" name="nombre3" value="" placeholder="Integrante 3">
+			<input type="text" id="nombre4" name="nombre4" value="" placeholder="Integrante 4">
+		  <br>
+			<h4>Objetivo</h4>
+			<input type="textarea" id="objetivo" name="objetivo" value="">
+			<br>
+			<h4>Orden del día</h4>
+			<input type="textarea" id="orden" name="orden" value="">
+			<br>
+			<h4>Desarrollo de la Reunión</h4>
+			<input type="textarea" id="desarrollo" name="desarrollo" value="">
+			<br>
+			<h4>Acuerdos</h4>
+			<input type="textarea" id="acuerdos" name="acuerdos" value="">
+			<br>
+			<p></p><button type:"submit" onclick:"crear();">GUARDAR</button>
+		</div>
+		<div id="elementH">
+		</div>
+		
+	</body>
+</html>
