@@ -1,3 +1,18 @@
+/*****************************************************************************
+******************************************************************************
+# Program Name: programa15.js
+# Authors: Gabriel Carcedo Rodríguez
+# Description: Example of the use of the Library for WhatsApp messages
+
+#Funciones:
+# querySelector(field) // Selecciona el Campo con el que trabajar
+# addEventListener(action, functions(var)) // Realiza la(s) función(es)
+                                              mediante la acción
+# encodeURIComponent(var) // Añade la Variable a la dirección
+# open(var) // Abre (en este caso una ventana)
+******************************************************************************
+*****************************************************************************/
+
 document.querySelector('#send_message').addEventListener('click',function(){
   var message = document.querySelector('#mensaje').value;
   var number = document.querySelector('#number').value;

@@ -1,3 +1,9 @@
+<!--
+Sorce: index2-13.php
+Description: Listado del opciones de nombres de Pokemones para usarlos
+Date: 06/Mar/2020
+Author: Gabriel Carcedo Rodríguez
+-->
 
 <?php
 //Esta pequeña página de php lo único que hace es recibir una petición con un parámetro pasado
