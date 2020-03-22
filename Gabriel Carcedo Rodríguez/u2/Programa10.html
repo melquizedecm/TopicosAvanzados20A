@@ -1,0 +1,123 @@
+<!--
+Sorce: Programa10
+Description: Use of the Library: Graphic
+Date: 28/Feb/2020
+Author: Gabriel Carcedo Rodríguez
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "ERRORES"
+	},
+	axisX:{
+		title: "Incremento iterativo",
+		crosshair: {
+			enabled: true
+		}
+	},
+	axisY: {
+		title: "Incremento erróneo",
+		crosshair: {
+			enabled: true
+		}
+	},
+	toolTip:{
+		shared:true
+	},  
+	legend:{
+		cursor:"pointer",
+		verticalAlign: "bottom",
+		horizontalAlign: "left",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type: "line",
+		showInLegend: true,
+		name: "Error Aproximado",
+		markerType: "square",
+		xValueFormatString: "#",
+		color: "#F00180",
+		dataPoints: [
+			{ x: 1, y: 0.013530565 },
+			{ x: 2, y: 0.444056985 },
+			{ x: 3, y: 0.411176969 },
+			{ x: 4, y: 0.412158026 },
+			{ x: 5, y: 0.412135065 },
+			{ x: 6, y: 0.412135218 },
+			{ x: 7, y: 0.41213521698 },
+			{ x: 8, y: 0.4121352179 },
+			{ x: 9, y: 0.41213521795435 },
+			{ x: 10, y: 0.412135217954 },
+			{ x: 11, y: 0.41213521179543529464 }
+		]
+	},
+	{
+		type: "line",
+		showInLegend: true,
+		name: "Error verdadero",
+		lineDashType: "dash",
+		color: "#F01000",
+		dataPoints: [
+			{ x: 1, y: 0.000135287 },
+			{ x: 2, y: 0.44399691 },
+			{ x: 3, y: 0.411121342 },
+			{ x: 4, y: 0.412094748 },
+			{ x: 5, y: 0.412079309 },
+			{ x: 6, y: 0.412079461 },
+			{ x: 7, y: 0.412079461003 },
+			{ x: 8, y: 0.412079461 },
+			{ x: 9, y: 0.412079461004 },
+			{ x: 10, y: 0.4120794610049863 },
+			{ x: 11, y: 0.412079461004986 }
+		]
+	},
+	{
+		type: "line",
+		showInLegend: true,
+		name: "Error relativo porcentual",
+		lineDashType: "dash",
+		color: "#2020BB",
+		dataPoints: [
+			//{ x: 1, y: 0.0 },
+			//{ x: 2, y: 79.898889 },
+			//{ x: 3, y: 5.584023477 },
+			{ x: 4, y: 0.165610198 },
+			{ x: 5, y: 0.002626809023 },
+			{ x: 6, y: 0.00002602991484 },
+			{ x: 7, y: 0.00000000170130162 },
+			{ x: 8, y: 0.0000000009743 },
+			{ x: 9, y: 0.00000000000004495 },
+			{ x: 10, y: 0.000000000000044130484 },
+			{ x: 11, y: 0.00000000000000000030501 }
+		]
+	}]
+});
+chart.render();
+
+function toogleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>

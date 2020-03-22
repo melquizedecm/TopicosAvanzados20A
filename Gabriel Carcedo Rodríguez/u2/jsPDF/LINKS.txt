@@ -1,0 +1,4 @@
+https://parall.ax/products/jspdf
+https://www.npmjs.com/package/jspdf
+https://rawgit.com/MrRio/jsPDF/master/docs/index.html
+https://dataurl.sveinbjorn.org/#dataurlmaker
