@@ -1,18 +1,29 @@
 <!DOCTYPE HTML>
+<!--/*****************************************************************************************************************************************************************************
+# Program Name: Program10.html
+# Authors: Victoria de los Angeles Solís Pérez
+# Description:  Pie chart creator programs
+#Funciones y objetos:
+# window.onload= function ()                          //Objeto que contiene una función llamada chartContainer
+#var chart = new CanvasJS.Chart("chartContainer", ... //Objeto con datos para hacer una grafica de pastel a través de la librería chartContainer
+#chart.render()                                       //Función que grafica los datos de la tabla anterior
+******************************************************************************
+*****************************************************************************/-->
+
 <html>
 <head>
 <meta charset="UTF-8">
 <script>
 window.onload = function() {
 
-var chart = new CanvasJS.Chart("chartContainer", {
+var chart = new CanvasJS.Chart("chartContainer", { //Datos del tema (Lo visual)
 	theme: "light2", // "light1", "light2", "dark1", "dark2"
 	exportEnabled: true,
 	animationEnabled: true,
 	title: {
-		text: "Desktop Browser Market Share in 2016"
+		text: "Victoria Solís Pérez Parcial 1"
 	},
-	data: [{
+	data: [{ //Tipo de tabla que se generará
 		type: "pie",
 		startAngle: 25,
 		toolTipContent: "<b>{label}</b>: {y}%",
@@ -20,11 +31,13 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		legendText: "{label}",
 		indexLabelFontSize: 16,
 		indexLabel: "{label} - {y}%",
-		dataPoints: [
-			{ y: 86, label: "Tópicos" },
-			{ y: 87, label: "Base de datos" },
-			{ y: 70, label: "Métodos númericos" },
+		dataPoints: [ //Almacena los datos que se graficaran
+			{ y: 87, label: "Tópicos" },
+			{ y: 78, label: "Base de datos" },
+			{ y: 41, label: "Métodos númericos" },
 			{ y: 100, label: "Tutorías" },
+			{ y: 67, label: "PEYAD" },
+			{ y: 94, label: "Simulación" },
 			
 		]
 	}]
@@ -36,6 +49,6 @@ chart.render();
 </head>
 <body>
 <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
-<script src="../../canvasjs.min.js"></script>
+<script src="canvasjs-2.3.2/canvasjs.min.js"></script>
 </body>
 </html>
