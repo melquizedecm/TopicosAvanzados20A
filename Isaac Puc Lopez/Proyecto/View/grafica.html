@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -35,20 +36,42 @@
 				</section>
 
 			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row">
-							<div class="col-4 col-12-medium">
+				<script>
+				window.onload = function () {
 
-							<P>AQUI VA LA GRAFICA</P>
-							<P>AQUI VA LA GRAFICA</P>
-							<P>AQUI VA LA GRAFICA</P>
+				var options = {
+					animationEnabled: true,  
+					title:{
+						text: "Ropa lavada por mes"
+					},
+					axisY: {
+						title: "Cantidad en kilos",
+						valueFormatString: "",
+						suffix: "kg"
+					},
+					data: [{
+						type: "area",
+						yValueFormatString: "##0\"kg\"",
+						dataPoints: [
+							{y: 865, label: "Enero"},
+							{y: 720, label: "Febrero"},
+							{y: 613, label: "Marzo"},
+							{y: 864, label: "Abril"},
+							{y: 764, label: "Mayo"},
+							{y: 745, label: "Junio"},
+							{y: 724, label: "Julio"},
+							{y: 612, label: "Agosto"},
+							{y: 631, label: "Septiembre"},
+							{y: 750, label: "Octubre"},
+							{y: 806, label: "Noviembre"},
+							{y: 1023, label: "Diciembre"}
+						]
+					}]
+				};
+				$("#chartContainer").CanvasJSChart(options);
 
-
-							</div>
-						</div>
-					</div>
-				</section>
+				}
+				</script>
 
 			<!-- Copyright -->
 				<div id="copyright">
@@ -58,6 +81,7 @@
 				</div>
 
 		</div>
+		<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -66,6 +90,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+			<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 	</body>
 </html>
