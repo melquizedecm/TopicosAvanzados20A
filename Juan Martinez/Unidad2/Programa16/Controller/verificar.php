@@ -7,9 +7,4 @@ if (isset($_POST['text']) && isset($_POST['contraseña'])) {
 } else {
   header ('location: ../index.php');
 }
-
-
-
-
-
 ?>
