@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <!--
 Source:         Programa9.html
-Description:    
+Description:    Uso y menejo de tablas con la librería DATATABLESJS
 Date:           21/Feb/20
 Author:         Isaac Puc López
 -->
 
 <html>
     <head>
+    	<!--Importacion de las librerías al proyecto-->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+       	<!--Función anónima declarada-->
         <script>$(document).ready(function() {
         $('#example').DataTable({ 
           "order": [[3, "asc"]],
@@ -21,16 +23,16 @@ Author:         Isaac Puc López
           });
         });
         </script>
-        <title>Programa 8</title>
+        <title>Programa 9</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
-      <table id="example" class="display" style="width:100%">
+      <table id="example" class="display" style="width:100%">	<!--Declaración de la tabla-->
         <thead>
-            <tr>
-                <th>Name</th>
+            <tr>	<!--Crea una fila-->
+                <th>Name</th>	<!--Crea una columna-->
                 <th>Position</th>
                 <th>Office</th>
                 <th>Age</th>
