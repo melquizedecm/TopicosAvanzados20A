@@ -2,7 +2,6 @@
 session_start();
 if (!isset($_SESSION['user'])) {
    header('location: Login/index.php');
-   echo "No está configurado";
  }
 ?>
 
