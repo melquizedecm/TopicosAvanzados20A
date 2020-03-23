@@ -1,0 +1,40 @@
+<!-- Programa 10
+Ivan Alejandro Arias Escobar
+Graficacion de promedios
+28/02/2020-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Ivan Alejandro Arias Escobar"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 46, label: "Calculo Vectorial"},
+			{y: 100, label: "Tutorias"},
+			{y: 87, label: "Bases De Datos"},
+			{y: 80, label: "Investigacion De Operaciones"},
+			{y: 76, label: "Cultura Empresarial"},
+			{y: 100, label: "Ingles"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
