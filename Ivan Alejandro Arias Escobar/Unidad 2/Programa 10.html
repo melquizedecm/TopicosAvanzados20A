@@ -2,6 +2,7 @@
 Ivan Alejandro Arias Escobar
 Graficacion de promedios
 28/02/2020-->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -11,16 +12,17 @@ window.onload = function() {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title: {
-		text: "Ivan Alejandro Arias Escobar"
+    //Aqui se escribe el texto de la grafica que se quiera 
+       text: "Ivan Alejandro Arias Escobar" 
 	},
 	data: [{
-		type: "pie",
+		type: "pie", //Aqui se define el tipo de grafica, en este caso usamos el de pastel 
 		startAngle: 240,
 		yValueFormatString: "##0.00\"%\"",
 		indexLabel: "{label} {y}",
-		dataPoints: [
+		dataPoints: [ //Aqui dividimos la grafica dandole a cada cosa su lugar y el porcentaje que este va abarcar
 			{y: 46, label: "Calculo Vectorial"},
-			{y: 100, label: "Tutorias"},
+			{y: 100, label: "Tutorias"},                     
 			{y: 87, label: "Bases De Datos"},
 			{y: 80, label: "Investigacion De Operaciones"},
 			{y: 76, label: "Cultura Empresarial"},
@@ -31,6 +33,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 chart.render();
 
 }
+
 </script>
 </head>
 <body>
