@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<!--********************************************************************************************
+# Program Name: Program14.html y JS
+# Authors: Juan Martinez Aké
+# Description:  Envio de correo con libreria en JS
+#
+#Funciones:
+#Liberias JS para el Envio de correos
+#
+******************************************************************************
+-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -75,7 +85,6 @@
                             message: this.message,
                             subject: this.subject,
                         };
-                        
                         emailjs.send("default_service","template_SfWnu8Xd", data)
                         .then(function(response) {
                             if(response.text === 'OK'){

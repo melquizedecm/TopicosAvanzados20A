@@ -1,13 +1,21 @@
 <!DOCTYPE html>
+<!--********************************************************************************************
+# Program Name: Program9.html
+# Authors: Juan Martinez Aké
+# Description:  Librerias para funicionalidad en tabla
+#
+#Funciones:
+#Liberias JS para el diseño de tablas
+#
+******************************************************************************
+-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
     <!-- Librerias -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" charset="utf-8"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" charset="utf-8"></script>
-
     <script type="text/javascript">
       /* Formatting function for row details - modify as you need */
       function format ( d ) {
@@ -43,7 +51,6 @@
                   ],
                   "order": [[1, 'asc']]
                 } );
-
                 // Add event listener for opening and closing details
                 $('#example tbody').on('click', 'td.details-control', function () {
                   var tr = $(this).closest('tr');
@@ -60,7 +67,6 @@
                 } );
               } );
     </script>
-    
     <style media="screen">
       td.details-control {
         background: url('../resources/details_open.png') no-repeat center center;
@@ -70,26 +76,6 @@
         background: url('../resources/details_close.png') no-repeat center center;
       }
     </style>
-
-    <!--script type="text/javascript">
-      //$(document).ready(function() {
-      //  $('#example').DataTable();
-      //} );
-
-      $(document).ready(function() {
-        $('#example').DataTable( {
-          "order": [[ 3, "desc" ]],
-          "columnDefs":[{
-            "render": function ( data, type, row ) {
-                    return data +' ('+ row[3]+')';
-                },
-                "targets": 0
-            },
-            { "visible": false,  "targets": [ 3 ]
-          }]
-        } );
-      } );
-    </script-->
     <title></title>
   </head>
   <body>
