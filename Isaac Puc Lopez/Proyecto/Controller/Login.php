@@ -17,13 +17,16 @@
 	//$username = md5($username);
 
 	//3. VALIDAR
-	if ($username=="Juan" && $password=="1234") {
+	if ($username=="lavanderia@gmail.com" && $password=="1234") {
 		session_start();		//para que la sesion inicie (funcion de php)
 		$_SESSION['user']=$username;
 
-	 	header("location: ../View/Landing/index.php");
+	 	header("location: ../View/index.php");
 	 } else{
-	 	header("location: ../View/Login/Login.php");
+	 	unset($_SESSION['user']);
+    	session_destroy();
+	 	header("location: ../View/Login/index.php");
+
 	 }
 
 
