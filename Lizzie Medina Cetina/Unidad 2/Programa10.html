@@ -1,8 +1,13 @@
-<!--
-Source:         Programa8.html
-Description:    Mostrar un intervalo de tiempo recorrido al ejecutar el programa.
-Date:           21/Feb/20
-Author:        Lizzie Medina Cetina -->
+<!--/*********************************************************************************************************************************************
+******************************** # Program Name: Program10.html
+# Authors: Lizzie Medina Cetina.
+#Date: 21/Feb/20.
+# Description: Realizacioon de Gráficas.
+#Funciones:
+*yValueFormaString: Permite formatear los valores antes de ser mostrados.
+*Datapoints: Es cada valor que se traza en la gráfica.
+#Librería:"https://canvasjs.com/assets/script/canvasjs.min.js"
+*****************************************************************************/-->
 
 <!DOCTYPE HTML>
 <html>
@@ -18,8 +23,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	data: [{
 		type: "pie",
 		startAngle: 240,
+		//En esta parte damos valores a la gráfica.
 		yValueFormatString: "##0.00\"%\"",
 		indexLabel: "{label} {y}",
+		//Mencionamos cada uno de los puntos que va tener nuestra tabla
+		//le asignamos un nombre y el porcentaje que se desea.
 		dataPoints: [
 			{y: 95, label: "Estructura de datos"},
 			{y: 77, label: "Física"},
@@ -30,12 +38,12 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 chart.render();
-
 }
 </script>
 </head>
 <body>
 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<!--Se llama a la librería que nos ayuda a darle formato/-->
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>
