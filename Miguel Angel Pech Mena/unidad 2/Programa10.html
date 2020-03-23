@@ -1,0 +1,47 @@
+<!--/*******************************************************************************************
+# Program Name: Program10.html
+# Authors: Miguel Angel Pech Mena
+# Description: hicimos la graficas de nuestras Calificaciones del semestre pasado.
+#
+#Funciones:
+# DataTable, chart type pie.
+#
+********************************************************************************************//-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var options = {
+	title: {
+		text: "Calificaciones Miguel Pech"
+	},
+	data: [{
+			type: "pie",
+			startAngle: 45,
+			showInLegend: "true",
+			legendText: "{label}",
+			indexLabel: "{label} ({y})",
+			yValueFormatString:"#,##0.#"%"",
+			dataPoints: [
+				{ label: "SS", y: 92 },
+				{ label: "GPS", y: 75},
+				{ label: "ADC", y: 86},
+				{ label: "TBD", y: 78},
+				{ label: "ED", y: 76},
+
+			]
+	}]
+};
+$("#chartContainer").CanvasJSChart(options);
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>
