@@ -8,26 +8,68 @@ doc.setFontSize(15)
 doc.text(70, 25, 'Minuta De Reunión Equipo')
 doc.addImage(img, 'JPEG', 195, 1, 16, 16)       ///Variable que alberga tu imagen, el formato, x, y, ancho, largo
 
-//Texto
+//Texto (Tabla 1)
 var fecha=document.getElementById("Texto").value;
 var hora=document.getElementById("Texto2").value;
 var Participante1=document.getElementById("Texto3").value;
 var Participante2=document.getElementById("Texto4").value;
 var Participante3=document.getElementById("Texto5").value;
 var Participante4=document.getElementById("Texto6").value;
+var Participante5=document.getElementById("Texto7").value;
+var lugar=document.getElementById("Texto8").value;
+//Texto (Tabla 2)
+var objetivo=document.getElementById("Texto9").value;
+//Texto (Tabla 3)
+var orden1=document.getElementById("Texto10").value;
+var orden2=document.getElementById("Texto11").value;
+var orden3=document.getElementById("Texto12").value;
+var orden4=document.getElementById("Texto13").value;
+//Texto (Tabla 4)
+var punto1=document.getElementById("Texto14").value;
+var punto2=document.getElementById("Texto15").value;
+//Texto (Tabla 5)
+var acuerdo1=document.getElementById("Texto16").value;
+var acuerdo2=document.getElementById("Texto17").value;
 //Texto del cuadro prederterminado(Tabla 1)
 doc.text(30,35, "Fecha:")
 doc.text(30,40, "Hora:")
 doc.text(30,45, "Participantes:")
 doc.text(70,80, "MTI. Melquizedec Moo Medina")
 doc.text(30,88, "Lugar:")
-//Posicion del texto introducido
-doc.text(60,50,fecha)
-doc.text(60,60,hora)
-doc.text(60,70,Participante1)
-doc.text(60,80,Participante2)
-doc.text(60,90,Participante3)
-doc.text(60,100,Participante4)
+//Texto del cuadro prederterminado(Tabla 2)
+doc.text(30,105,"Objetivo")
+//Texto del cuadro prederterminado(Tabla 3)
+doc.text(30,125,"Orden Del Dia")
+doc.text(30,130,"1.")
+doc.text(30,135,"2.")
+doc.text(30,140,"3.")
+doc.text(30,145,"4.")
+//Texto del cuadro prederterminado (Tabla 4)
+doc.text(30,160,"Desarrollo De La Reunión")
+//Texto del cuadro prederterminado (Tabla 5)
+doc.text(30,180,"Acuerdos")
+//Posicion del texto introducido (Tabla 1)
+doc.text(70,35,fecha)
+doc.text(70,40,hora)
+doc.text(70,45,Participante1)
+doc.text(70,53,Participante2)
+doc.text(70,60,Participante3)
+doc.text(70,67,Participante4)
+doc.text(70,67,Participante5)
+doc.text(70,88,lugar)
+//Posicion del texto introducido (Tabla 2)
+doc.text(30,110,objetivo)
+//Posicion del texto introducido (Tabla 3)
+doc.text(35,130,orden1)
+doc.text(35,135,orden2)
+doc.text(35,140,orden3)
+doc.text(35,145,orden4)
+//Posicion del texto introducido (Tabla 4)
+doc.text(30,165,punto1)
+doc.text(30,170,punto2)
+//Posicion del texto introducido (Tabla 5)
+doc.text(30,185,acuerdo1)
+doc.text(30,190,acuerdo2)
 //Tabla 1
 doc.line(30, 30, 180, 30)//Linea horizontal
 doc.line(30, 35, 180, 35)//Linea horizontal
@@ -74,5 +116,5 @@ doc.line(30, 200, 180, 200)//Linea horizontal
 doc.line(30, 200, 30, 175) // vertical line
 doc.line(180, 200, 180, 175) // vertical line
 // Guardar el pdf
-doc.save('Practica12.pdf')
+doc.save('Programa12.pdf')
 }
