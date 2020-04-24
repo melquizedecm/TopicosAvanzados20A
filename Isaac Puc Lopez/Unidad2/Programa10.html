@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	 <meta charset="UTF-8">
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", { //se llama a la función de la librería canvas JS
+	animationEnabled: true,
+	title: {	//Le da el titulo a la gráfica 
+		text: "Isaac Puc López"
+	},
+	data: [{
+		type: "pie",	//Se coloca el tipo de gráfica que se desea (de pastel, barras, puntos, etc...)
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 70, label: "Topicos"},
+			{y: 100, label: "Tutorias"},
+			{y: 87, label: "Smulación"},
+			{y: 76, label: "BD"},
+			{y: 70, label: "Metodos numericos"},
+			{y: 100, label: "Ecuaciones diferenciales"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 500px; width: 100%;"></div> <!--Se pone la vista de la gráfica para que sea mostrado en el html y se establece el tmaño-->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

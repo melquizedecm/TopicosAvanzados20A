@@ -7,8 +7,8 @@ doc.text(35, 25, 'Prueba PDF')
 //Formato de la imagen  x,x,ancho,alto
 doc.addImage(imgData, 'JPEG', 15, 40, 180, 160)
 //Triangulo
-doc.triangle(192,123,100,100,232,121)
+//doc.triangle(192,123,100,100,232,121)
 //guardar datos de input
-document.getElementById('prueba').value;
+//document.getElementById('prueba').value;
 //guardar
-doc.save('Example.pdf')
+doc.save('Prueba.pdf')
