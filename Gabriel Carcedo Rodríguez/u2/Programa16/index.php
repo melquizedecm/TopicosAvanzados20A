@@ -9,6 +9,7 @@
 		
 		<form action="Controller/verificar.php" method="POST">
 			<input type="text" placeholder="Write your Name" id="inputName" name="inputName"><p></p>
+			<input type="text" placeholder="Write your Username" id="inputUser" name="inputUser"><p></p>
 			<input type="password" placeholder="Write your Password" id="inputPassword" name="inputPassword"><p></p>
 			<input type="submit" value="Check">
 		</form>
