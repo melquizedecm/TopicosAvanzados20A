@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,13 +30,14 @@
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/icono.jpg" alt="IMG">
 				</div>
-
+                 <!--Titulo Del Login -->
 				<form class="login100-form validate-form" action="../../Controller/Login.php" method="POST">
 					<span class="login100-form-title">
 						Member Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<!--Texto que tendra el apartado donde se introducira el password -->
 						<input class="input100" type="text" name="inputUser" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -44,13 +46,14 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<!--Texto que tendra el apartado donde se introducira el password -->
 						<input class="input100" type="password" name="inputPassword" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-					
+					<!-- Texto del boton de Login -->
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Login
@@ -74,6 +77,7 @@
 <!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
 	<script >
+		//Animacion De imagen principal
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
