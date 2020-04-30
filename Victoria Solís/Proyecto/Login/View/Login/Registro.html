@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Suscripción</title>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="group">
+
+<form class="needs-validation" novalidate>
+	<h2><em>¡Registrate!</em></h2>
+	<center><img src="selector.png" class = "card-img-top"> </center>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+    	<label for="validationTooltip01">Nombre <span><em>(requerido)</em></span></label>
+      <input type="text" class="form-control" id="validationTooltip01" required placeholder="Nombre(s)">
+      <div class="valid-tooltip">
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+    	<label for="validationTooltip02">Apellido <span><em>(requerido)</em></span></label>
+      <input type="text" class="form-control" id="validationTooltip02" required placeholder="Apellido(s)">
+      <div class="valid-tooltip">
+      </div>
+    </div>
+    <div>
+    	<!--**************************************************-->
+    </div>
+    <div class="col-md-4 mb-3">
+    	<label for="validationTooltipUsername">Nombre de Usuario <span><em>(Elija un nombre de usuario único y válido.)</em></span></label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="validationTooltipUsernamePrepend"></span>
+        </div>
+        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Correo electronico</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="colFormLabel" placeholder="Josue123@hotmail.com">
+    </div>
+  </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+    	<label for="validationTooltip03">Ciudad <span><em> (Proporcione una ciudad válida.)</em></span></label>
+      <input type="text" class="form-control" id="validationTooltip03" required>
+      <div class="invalid-tooltip">
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+    	<label for="validationTooltip04">Estado<span><em> (Por favor seleccione un estado válido.)</em></span></label>
+      <select class="custom-select" id="validationTooltip04" required>
+        <option selected disabled value="">Escoger...</option>
+        <option>Yucatan</option>
+      </select>
+      <div class="invalid-tooltip">
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+    	<label for="validationTooltip05">Còdigo Postal<span><em> (Proporcione una postal válida.)</em></span></label>
+      <input type="text" class="form-control" id="validationTooltip05" required>
+      <div class="invalid-tooltip">
+      </div>
+    </div>
+  </div>
+
+   <center> <input class="form-btn" name="submit" type="submit" value="¡Registrarse!" /></center>
+</form>
+
+
+</div>
+
+
+</div>
+</body>
+</html>

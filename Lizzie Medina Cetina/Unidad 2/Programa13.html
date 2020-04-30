@@ -1,0 +1,57 @@
+<!--/*********************************************************************************************************************************************
+******************************** # Program Name: Program12.html
+# Authors: Lizzie Medina Cetina.
+#Date: 06/Marzo/20.
+# Description: Ejemplo de librería POST.
+#Librería:"https://code.jquery.com/jquery-3.4.1.js"
+*****************************************************************************/-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario Pokemones Originales</title>
+</head>
+<body>
+    <!--Ponemos un input para que el usuario meta el número de pokemon que quiere saber-->
+    <label for="numero">Escribe el número de un pokemon para saber su nombre </label>
+    <input type="number" min="0" max="150" name="numero" id="numero">
+
+    <!--Este botón al presionarlo vamos a ejecutar el JQuery.Post()-->
+    <input type="button" id="boton" value="Ver nombre de Pokemon">
+
+    <!--Aquí vamos a mostrar el resultado-->
+    <div id="resultado"></div>
+
+
+    <!-- Imortamos la liberría JQuery mediante su CDN-->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+
+    <!--AQuí va nuestro código de JavaScript-->
+    <script>
+        $(document).ready(function() //Verificamos que esto suceda despues de cargar la página
+        {
+            $("#boton").click(function(){ //Checamos el clic en el boton con su selector id
+                   //Obtenemos el valor que esta en el cuadro de texto
+                   var id=$('#numero').val();
+                    //Aquí ejecutamos el envio de información por POST el primer parámetro
+                    //que pasamos es la dirección web de la página externa (API), en este
+                    //caso no tenemos que poner toda la dirección URL porque esta en la
+                    //misma carpeta, el segundo parámetro es un arreglo de parámetros que
+                    //Queremos enviar siempre con la nomenclatura nombre:valor, podemos
+                    //mandar tantas como queramos separadas por comas, el tercer parámetro
+                    //Es una función donde definimos que es lo que va a ocurrir con la respuesta
+                    //que obtengamos notese que en este caso recibimos un html completo de
+                    //respuesta por eso lo recibimos dentro del funcion con el nombre de htmlexterno
+                    $.post("index2-13.php", {numero: id, nombre: 'Test'}, function(htmlexterno){
+        $("#resultado").html(htmlexterno); //cambiamos el contenido de ese div por el html que recibimos como respuesta
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -12,7 +12,7 @@
 # open(var) // Abre (en este caso una ventana)
 ******************************************************************************
 *****************************************************************************/
-
+//Funciones para poder hacer el envío del mensaje por WhatsApp
 document.querySelector('#send_message').addEventListener('click',function(){
   var message = document.querySelector('#mensaje').value;
   var number = document.querySelector('#number').value;

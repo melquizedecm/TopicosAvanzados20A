@@ -8,12 +8,12 @@ if(isset($_GET['inputName']) && isset($_GET['inputUser']) && isset($_GET['inputP
 	if($name=='Gabriel' && $user=='cubacarcedo' && $pass=='111')
 	{
 		echo "HOLA";
-		//header("location: ../View/LandingPage/index.html");
+		header("location: ../View/LandingPage/index.html");
 	}
 	else
 	{
 		echo "HOLA";
-		//header("location: ../index.php");
+		header("location: ../index.php");
 	}
 }
 else

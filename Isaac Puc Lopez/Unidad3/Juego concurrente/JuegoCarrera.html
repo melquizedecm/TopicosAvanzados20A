@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+
+-->
+
+
+
+<html>
+    <head>
+        <!--Importación de la librería-->
+        <script src="Concurrent.Thread.Compiler.js" type="text/javascript"></script>
+        <script>
+            //funcion que modela al nadador a partir de los parámnetros solisitados, maneja su etiqueta en mts 
+            // y muestra al ganador una vez concluido el proceso
+            function nadador(numero, etiquetaNombre, etiqueta, img, fin){
+                var i = 0;
+                while(i <= fin){
+                    document.getElementById(etiqueta).value = parseInt(i / 1000) + "mts"; //Muestra la etiqueta que dice cuantos metros ha nadado
+                    document.getElementById(img).style.paddingLeft=100 + parseInt(i / 100) + "px";//controla la posicion del nadador y la mueve segun el contador "i"
+                    i++;
+                }
+                nombre = document.getElementById(etiquetaNombre).value; //obtiene el nombre del nadador a partir del parametro etiquetaNombre
+                alert("Terminó el nadador "+nombre+" con el número "+ numero); //muestra el número y nombre del nadador según hayan llegado a la meta
+            }
+
+            function ejecutar(){
+                document.getElementById("img1").style.display="inline"; //hace que la imagen con el id img1 sea visible en pantalla
+                document.getElementById("img2").style.display="inline";
+                document.getElementById("img3").style.display="inline";
+                document.getElementById("img4").style.display="inline";
+                Concurrent.Thread.create(nadador, 1,"nadador1", "input1", "img1", 100000);//crea un hilo que a su vez llama a la funcion nadador y le pasa los parámetros que se necesitan 
+                Concurrent.Thread.create(nadador, 2,"nadador2", "input2", "img2", 100000);
+                Concurrent.Thread.create(nadador, 3,"nadador3", "input3", "img3", 100000);
+                Concurrent.Thread.create(nadador, 4,"nadador4", "input4", "img4", 100000);
+            }
+
+        </script>
+        <title>Olimpiada de natación</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+    </head>
+
+    <!--<body onload="ejecutar()">-->
+     <body background="https://thumbs.dreamstime.com/b/piscina-ol%C3%ADmpica-6411720.jpg" style="background-repeat: no-repeat; background-size: 100%"> <!--muestra la imagen de fondo ampliada al tamaño de la pantalla-->
+
+        <label style="background-color: #D2B4DE">Nombre Nadador 1:</label> <!--Muestra en pantalla el texto-->
+        <input type="text" size="10" style="background-color: #D2B4DE" id="nadador1"></br><!--campo de entrada que toma el nombre del nadador-->
+        <label style="background-color: #F5B7B1">Nombre Nadador 2:</label>
+        <input type="text" size="10" style="background-color: #F5B7B1" id="nadador2"></br>
+        <label style="background-color: #AED6F1">Nombre Nadador 3:</label>
+        <input type="text" size="10" style="background-color: #AED6F1" id="nadador3"></br>
+        <label style="background-color: #A2D9CE">Nombre Nadador 4:</label>
+        <input type="text" size="10" style="background-color: #A2D9CE" id="nadador4"></br>
+
+        <button onclick="ejecutar();">Iniciar carrera</button></br> <!--al presionar el botón llama a la función ejecutar que se creo anteriormente-->
+        </br>
+        </br>
+
+        <div style="position: center;"></div> 
+        <!--crea la imagen en la pantalla pero a su vez la hace no visible, el input muestra unicamente la distancia que recorre el nadador-->
+        <img src="nadadorImg.gif" width="8%" style="display: none; padding-left: 32%; padding-top: 3.5%" id="img1"><input type="text" size="2" id="input1" readonly></br>
+        <img src="nadadorImg.gif" width="8%" style="display: none; padding-left: 32%" id="img2"><input type="text" size="2" id="input2" readonly></br>
+        <img src="nadadorImg.gif" width="8%" style="display: none; padding-left: 32%" id="img3"><input type="text" size="2" id="input3" readonly></br>
+        <img src="nadadorImg.gif" width="8%" style="display: none; padding-left: 32%; padding-top: 2.5% " id="img4"><input type="text" size="2" id="input4" readonly></br>
+
+    </body>
+</html>

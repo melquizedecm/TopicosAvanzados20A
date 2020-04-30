@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+		<script src="Concurrent.Thread.Compiler.js" type="text/javascript"></script>
+
+		<script>
+			
+			function cars(numero, etiquetaNombre, etiqueta, img, fin)
+			{
+				var i = 0;
+				while(i <= fin)
+				{
+					document.getElementById(etiqueta).value= parseInt(i/10000) + " mts";
+					document.getElementById(img).style.paddingLeft= 20 + parseInt(i/1000)+"px";
+					i++;
+				}
+				
+				nombre = document.getElementById(etiquetaNombre).value;
+
+				if(numero == 1)
+				{
+					alert("¡Marge no pudo alcanzar a Bart! - GANÓ: "+nombre);
+				}
+				else
+				{
+					alert("¡Marge alcanzó a Bart! - GANÓ: "+nombre);				}
+			}
+
+			function ejecutar()
+			{
+				document.getElementById("img1").style.display="inline";
+				document.getElementById("img2").style.display="inline";
+				Concurrent.Thread.create(cars, 1, "name1", "input1", "img1", 1300000);
+				Concurrent.Thread.create(cars, 2, "name2", "input2", "img2", 1300000);
+			}
+
+			function finalizar()
+			{
+
+			}
+
+		</script>
+		<title>SIMPSON CARS PLAY</title>
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body background="FONDO.jpg">
+
+		<label>Player 1  (Bart): </label>
+		<input type="text" id="name1"/><br>
+		<label>Player 2 (Marge): </label>
+		<input type="text" id="name1"/><br>
+
+		<button onclick="ejecutar();">Comenzar Persecución</button><br>
+		<br>
+		<br>
+
+		<div style="position: center;">
+			<img src="bart.gif" width="100" style="display: none; padding-left: 20px" id="img1"><input type="text" size="7" id="input1" readonly/><br>
+			<img src="marge.gif" width="100" style="display: none; padding-left: 20px" id="img2"><input type="text" size="7" id="input2" readonly/><br>
+		</div>
+	</body>
+</html>

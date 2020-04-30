@@ -1,5 +1,4 @@
 <?php
-
 /*
 * RECEPCIÓN Y VALIDACIÓN DEL LOGIN
 *1. OBTENER LOS VALORES
@@ -7,9 +6,6 @@
 *3. VALIDAR
 *4. REGRESAR UNA RESPUEDTA
 */
-
-
-
 if(isset($_POST['inputName']) && isset($_POST['inputUser']) && isset($_POST['inputPassword']))
 {
 	//OBTENER VALORES y FILTRADO DE CONTENIDO

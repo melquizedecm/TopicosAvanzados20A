@@ -8,7 +8,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "ERRORES"
+		text: "ERROR APROXIMADO por ITERACIÓN"
 	},
 	axisX:{
 		title: "Incremento iterativo",
@@ -38,59 +38,16 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		name: "Error Aproximado",
 		markerType: "square",
 		xValueFormatString: "#",
-		color: "#F00180",
+		color: "#F50000",
 		dataPoints: [
-			{ x: 1, y: 0.013530565 },
-			{ x: 2, y: 0.444056985 },
-			{ x: 3, y: 0.411176969 },
-			{ x: 4, y: 0.412158026 },
-			{ x: 5, y: 0.412135065 },
-			{ x: 6, y: 0.412135218 },
-			{ x: 7, y: 0.41213521698 },
-			{ x: 8, y: 0.4121352179 },
-			{ x: 9, y: 0.41213521795435 },
-			{ x: 10, y: 0.412135217954 },
-			{ x: 11, y: 0.41213521179543529464 }
-		]
-	},
-	{
-		type: "line",
-		showInLegend: true,
-		name: "Error verdadero",
-		lineDashType: "dash",
-		color: "#F01000",
-		dataPoints: [
-			{ x: 1, y: 0.000135287 },
-			{ x: 2, y: 0.44399691 },
-			{ x: 3, y: 0.411121342 },
-			{ x: 4, y: 0.412094748 },
-			{ x: 5, y: 0.412079309 },
-			{ x: 6, y: 0.412079461 },
-			{ x: 7, y: 0.412079461003 },
-			{ x: 8, y: 0.412079461 },
-			{ x: 9, y: 0.412079461004 },
-			{ x: 10, y: 0.4120794610049863 },
-			{ x: 11, y: 0.412079461004986 }
-		]
-	},
-	{
-		type: "line",
-		showInLegend: true,
-		name: "Error relativo porcentual",
-		lineDashType: "dash",
-		color: "#2020BB",
-		dataPoints: [
-			//{ x: 1, y: 0.0 },
-			//{ x: 2, y: 79.898889 },
-			//{ x: 3, y: 5.584023477 },
-			{ x: 4, y: 0.165610198 },
-			{ x: 5, y: 0.002626809023 },
-			{ x: 6, y: 0.00002602991484 },
-			{ x: 7, y: 0.00000000170130162 },
-			{ x: 8, y: 0.0000000009743 },
-			{ x: 9, y: 0.00000000000004495 },
-			{ x: 10, y: 0.000000000000044130484 },
-			{ x: 11, y: 0.00000000000000000030501 }
+			{ x: 1, y: 29.57286567776729 },
+			{ x: 2, y: 23.757614053720427 },
+			{ x: 3, y: 13.344623085849822 },
+			{ x: 4, y: 3.443986261712411 },
+			{ x: 5, y: 0.19697561081074297 },
+			{ x: 6, y: 0.0006163133951399579 },
+			{ x: 7, y: 0.000000006017839505409813 },
+			{ x: 8, y: 0.0 }
 		]
 	}]
 });
