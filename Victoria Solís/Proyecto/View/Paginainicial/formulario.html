@@ -42,7 +42,7 @@
                         </textarea>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3 text-center">
-                        <button @click="enviar" class="btn btn-success">
+                        <button @click="enviar()" class="btn btn-success">
                             Enviar
                         </button>
                         
@@ -79,6 +79,7 @@
                             to_email: this.to_email,
                             message: this.message,
                             subject: this.subject,
+                            
                         };
                         
                         emailjs.send("default_service","template_SfWnu8Xd", data)

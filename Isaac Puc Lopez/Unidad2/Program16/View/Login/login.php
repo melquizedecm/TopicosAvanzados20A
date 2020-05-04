@@ -17,7 +17,7 @@ Author:         Isaac Puc López
 
     <body >	
 
-        <form class="needs-validation" action="../../Controller/Login.php" method="POST">
+        <form class="needs-validation" action="../../Controller/Login.php" method="POST"><!--Se llama al archivo Login.php al presionar el botón "enviar"-->
           <div class="card-body">        
 
             <div class="cards col-lg-8">

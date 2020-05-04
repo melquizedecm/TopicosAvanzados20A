@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de carrera de autos</title>
+
+    <script src="Concurrent.Thread.Compiler.js" type="text/javascript"></script>
+    
+    <script >
+        
+        //Son variables globales con la finalidad de que los hilos no las usen y así poder sacar el lugar correspondiente
+        //Nota: Corregir el problema de los lugares
+        
+        
+      
+        
+        function conejo (numero, etiquetaNombre, etiqueta, img, fin){
+        var i=0; 
+        
+        var recorrido=0;
+        var contador=0;
+        
+        
+        
+        
+        while ((i/250)<=fin){
+            document.getElementById(etiqueta).value=parseInt(i/250) + "mts"; //Sale el lugar en donde se encuentra el caballo dentro de la etiqueta input
+            
+           
+          
+            document.getElementById(img).style.paddingLeft= 10 + parseInt(i/250) + "px"; //El caballo avanza con este
+           
+            i++;
+
+            }
+
+            nombre=document.getElementById(etiquetaNombre).value;
+            alert("El ganador es: "+nombre);
+
+            
+           
+           
+           
+        }
+
+             
+        
+                 
+
+                 
+           
+
+        function ejecutar (){
+
+            document.getElementById("img1").style.display="inline";
+            document.getElementById("img2").style.display="inline";
+            document.getElementById("img3").style.display="inline";
+
+            document.getElementById("input1").style.display="inline";
+            document.getElementById("input2").style.display="inline";
+            document.getElementById("input3").style.display="inline";
+
+
+            Concurrent.Thread.create(conejo, 1, "inputConejo1", "input1", "img1", 1000);
+            Concurrent.Thread.create(conejo, 2, "inputConejo2", "input2", "img2", 1000);
+            Concurrent.Thread.create(conejo, 3, "inputConejo3", "input3", "img3", 1000);
+
+            
+
+        
+            
+
+        }
+    </script>
+
+</head>
+
+<body background="https://static.vecteezy.com/system/resources/previews/000/302/476/non_2x/aerial-view-of-a-running-track-vector.jpg" style="background-repeat: no-repeat; background-size:100%;">
+
+    <label>Nombre del conejo: </label>
+    <input type="text" id="inputConejo1" /><br>
+    
+    <label>Nombre del conejo: </label>
+    <input type="text" id="inputConejo2"/><br>
+
+    <label>Nombre del conejo: </label>
+    <input type="text" id="inputConejo3"/><br>
+
+    <button onclick="ejecutar();">Iniciar carrera</button><br>
+    
+    
+    <br>
+    <br>
+    <div style="position: center;">
+    <img src="https://www.gifsanimados.org/data/media/327/conejo-imagen-animada-0322.gif" width="100" style="display:none; padding-left:400px" id="img1"><input type="text" style="display:none;" size="7" id="input1" readonly /> <br> 
+    <br>
+    <br>
+    <br>
+    <img src="https://www.gifsanimados.org/data/media/327/conejo-imagen-animada-0322.gif" width="100" style="display:none; padding-left:400px" id="img2"><input type="text" style="display:none;" size="7" id="input2" readonly /> <br> 
+    <br>
+    <br>
+    <br>
+    <img src="https://www.gifsanimados.org/data/media/327/conejo-imagen-animada-0322.gif" width="100" style="display:none; padding-left:400px" id="img3"><input type="text" style="display:none;" size="7" id="input3" readonly /> <br> 
+    
+    
+</body>
+
+</html>
