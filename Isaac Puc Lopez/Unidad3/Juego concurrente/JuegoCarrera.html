@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <!--
-
+Source: JuegoCarrera.html
+Date: 29/Abril/2020 
+Description: Juego creado utilizando la programación concurrente
+Se simula una competencia de natación en la cual cada "nadador"
+se controla de manera independiente (con la programacion concurrente)
+Utilizando la librería: Concurrent.Thread.Compiler.js
 -->
 
 
@@ -23,15 +28,21 @@
                 alert("Terminó el nadador "+nombre+" con el número "+ numero); //muestra el número y nombre del nadador según hayan llegado a la meta
             }
 
-            function ejecutar(){
-                document.getElementById("img1").style.display="inline"; //hace que la imagen con el id img1 sea visible en pantalla
-                document.getElementById("img2").style.display="inline";
-                document.getElementById("img3").style.display="inline";
-                document.getElementById("img4").style.display="inline";
-                Concurrent.Thread.create(nadador, 1,"nadador1", "input1", "img1", 100000);//crea un hilo que a su vez llama a la funcion nadador y le pasa los parámetros que se necesitan 
-                Concurrent.Thread.create(nadador, 2,"nadador2", "input2", "img2", 100000);
-                Concurrent.Thread.create(nadador, 3,"nadador3", "input3", "img3", 100000);
-                Concurrent.Thread.create(nadador, 4,"nadador4", "input4", "img4", 100000);
+            function ejecutar(nombreN1, nombreN2, nombreN3, nombreN4){
+                
+                //Se realiza una validación para que se le establezca un nombre a acada uno de los nadadores
+               if (!(document.getElementById(nombreN1).value)=="" && !(document.getElementById(nombreN2).value)=="" && !(document.getElementById(nombreN3).value)=="" && !(document.getElementById(nombreN4).value)=="") {
+                    document.getElementById("img1").style.display="inline"; //hace que la imagen con el id img1 sea visible en pantalla
+                    document.getElementById("img2").style.display="inline";
+                    document.getElementById("img3").style.display="inline";
+                    document.getElementById("img4").style.display="inline";
+                    Concurrent.Thread.create(nadador, 1,"nadador1", "input1", "img1", 100000);//crea un hilo que a su vez llama a la funcion nadador y le pasa los parámetros que se necesitan 
+                    Concurrent.Thread.create(nadador, 2,"nadador2", "input2", "img2", 100000);
+                    Concurrent.Thread.create(nadador, 3,"nadador3", "input3", "img3", 100000);
+                    Concurrent.Thread.create(nadador, 4,"nadador4", "input4", "img4", 100000);
+               }else{
+                    alert("Debe nombrar a todos los nadadores antes de iniciar");
+               }
             }
 
         </script>
@@ -54,7 +65,7 @@
         <label style="background-color: #A2D9CE">Nombre Nadador 4:</label>
         <input type="text" size="10" style="background-color: #A2D9CE" id="nadador4"></br>
 
-        <button onclick="ejecutar();">Iniciar carrera</button></br> <!--al presionar el botón llama a la función ejecutar que se creo anteriormente-->
+        <button onclick="ejecutar('nadador1', 'nadador2', 'nadador3', 'nadador4');">Iniciar carrera</button></br> <!--al presionar el botón llama a la función ejecutar que se creo anteriormente-->
         </br>
         </br>
 
