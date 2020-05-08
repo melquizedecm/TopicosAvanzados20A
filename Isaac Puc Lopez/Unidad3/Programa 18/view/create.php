@@ -1,4 +1,6 @@
+<!--LLAMAMOS AL ARCHIVO usersController PARA HACER USO DE SUS FUNCIONES-->
 <?php require_once("../controller/usersController.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,18 +106,22 @@
 <body>
 <div class="signup-form">
     <form action="" method="post">
+    	<!--LE DAMOS EL TITULO AL FROMULARIO PARA QUE TENGA VISTA-->
 		<h2>Register</h2>
 		<p class="hint-text">Create a new user in a few seconds.</p>
-		
+		<!--MOSTRARÁ UN MENSAJE UNA VEZ REALIZADA LA FUNCION DE CREAR, YA SEA EXITOSA 
+			O FALLIDA PARA QUE EL USUARIO CONOZCA LO QUE SUCEDIÓ-->
 		<p class="hint-text"><?php if(isset($mensaje)) {echo $mensaje; } ?></p>
 		
         <div class="form-group">
 			<div class="row">
+				<!--LE PONEMOS EL IDENTIFICADOR AL INPUT PARA HACER USO DE LA INFORMACION INGRESADA EN LAS FUNCIONES-->
 				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_create" placeholder="Full Name" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
+        	<!--LE PONEMOS EL IDENTIFICADOR AL INPUT PARA HACER USO DE LA INFORMACION INGRESADA EN LAS FUNCIONES-->
         	<input type="phone" class="form-control" name="number_phone" placeholder="992602332" required="required">
         </div>
 		
@@ -123,6 +129,7 @@
             <button type="submit" class="btn btn-success btn-lg btn-block">Register</button>
         </div>
     </form>
+    <!--NOS PERMITE REGRESAR A LA VISTA GENEREAL DE LOS USUARIOS EN CUALQUIER MOMENTO-->
 	<div class="text-center">Presiona aquí para -><a href="index.php"> Regresa a la tabla</a></div>
 </div>
 </body>

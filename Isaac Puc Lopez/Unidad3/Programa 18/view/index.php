@@ -1,3 +1,4 @@
+<!--LLAMAMOS AL ARCHIVO usersController PARA HACER USO DE SUS FUNCIONES-->
 <?php require_once("../controller/usersController.php"); ?>
 
 <!DOCTYPE html>
@@ -183,10 +184,14 @@ $(document).ready(function(){
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-5">
+                        <!--LE DAMOS TITULO A LA TABLA-->
 						<h2>User <b>Management</b></h2>
 					</div>
 					<div class="col-sm-7">
+                        <!--EN EL BOTON DE "AGREAR USUARIO" LE PONEMOS QUE AL PRESIONAR NOS LLEVE A LA 
+                            PÁGINA "CREATE.PHP" EN DONDE INGRESAREMOS LOS ARCHIVOS-->
 						<a href="create.php" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
+                        <!--ESCONDEMOS ESTE BOTON YA QUE NO SE USARÁ EN ESTE PROGRAMA-->
 						<!--<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>-->
 					</div>
                 </div>
@@ -194,6 +199,8 @@ $(document).ready(function(){
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
+                        <!--LER PONEMOS TITULO A LAS CLUMNAS DE LA TABLA
+                            PARA IDENTIFICAR CADA ATRIBUTO-->
                         <th>ID_user</th>
                         <th>full_name</th>						
 						<th>number_phone</th>
@@ -203,15 +210,22 @@ $(document).ready(function(){
                 </thead>
                 <tbody>
 
+<!--GENERAMOS UNA FUNCIÓN PARA TRAER TODAS LAS FILAS QUE ESTAN ALMACENADAS EN LA BASE DE DATOS-->
 <?php while($fila=$tabla->fetch_array(MYSQLI_BOTH)){?>
                     <tr>
+                        <!--MOSTRAMOS LA INFORMACION EN SU RESPECTIVO CAMPO-->
                         <td><?php echo $fila[0]; ?></td>
                         <td><?php echo $fila[1]; ?></td>
                         <td><?php echo $fila[2]; ?></td>                        
                         <td><?php echo $fila[3]; ?></td>
                         <td>
+                            <!--HACEMOS UNA PEQUEÑA ENCRIPTACIÓN DE LOS DATOS 
+                                PARA QUE PERMANEZCAN MAS SEGUROS-->
                             <?php $edit=md5('id'); ?>
                             <?php $delete=md5('delete'); ?>
+                            <!--BOTONES QUE NOS PERMITEN RELAIZAR EDICION Y ELIMINACION DE USUARIOS
+                                NOS REDIRIGEN A SU RESPECTIVA VENTANA O EN EL CASO DE ELIMINAR REALIZA
+                                LA FUNCION AL OPRIMIR EL BOTÓN-->
                             <a href="edit.php?<?php echo $edit.'='.$fila[0];?>" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
                             <a href="?<?php echo $delete.'='.$fila[0];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
                         </td>
