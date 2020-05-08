@@ -1,0 +1,2 @@
+concurrent.thread.stop
+puede ser poniendo una condición de "al pulsar una tecla..."
