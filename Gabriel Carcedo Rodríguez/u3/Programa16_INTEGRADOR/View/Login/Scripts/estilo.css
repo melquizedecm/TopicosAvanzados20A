@@ -1,0 +1,12 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+
+	font-family: Berlin Sans FB Demi, Britannic Bold, Arial;
+	background: url(Fondo.jpg), black;
+	background-size: cover;
+	background-attachment: fixed; 
+}
