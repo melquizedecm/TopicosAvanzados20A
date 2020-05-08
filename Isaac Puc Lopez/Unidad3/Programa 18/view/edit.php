@@ -1,3 +1,4 @@
+<!--LLAMAMOS AL ARCHIVO usersController PARA HACER USO DE SUS FUNCIONES-->
 <?php require_once("../controller/usersController.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -104,27 +105,33 @@
 <body>
 <div class="signup-form">
     <form action="" method="post">
+    	<!--LE DAMOS EL TITULO AL FROMULARIO PARA QUE EL USUARIO SEPA DE QUE SE TRATA EL FORMULARIO-->
 		<h2>User Edit</h2>
 		<p class="hint-text">Edit a User and update his data.</p>
-		
+		<!--LEE EL ID QUE SE ENVIA DESDE LA VISTA PRONCIPAL Y MUESTRA LA FECHA Y HORA EN QUE SE DIO DE ALTA ESE USUARIO-->
 		<p class="hint-text"><?php if(isset($datos[3])) {echo $datos[3]; } ?></p>
+		<!--OCULTA EL ID DEL USUARIO PERO LO IDENTIFICA PARA TRABJAR CON SUS DATOS-->
 		<input type="hidden" name="id_user" value="<?php echo $datos[0]?>">
 		
         <div class="form-group">
 			<div class="row">
+				<!--MUESTRA EN EL INPUT EL NOMBRE DEL USUARIO AL QUE LE PERTENEZCA EL ID QUE SE OCULTÓ ANTEIRORMENTE Y PERMITE MODIFICARLO-->
 				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_edit"  
 					value="<?php echo $datos[1] ?>" placeholder="Full Name" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
+        	<!--MUESTRA EN EL INPUT EL NUMERO DEL USUARIO AL QUE LE PERTENEZCA EL ID QUE SE OCULTÓ ANTEIRORMENTE Y PERMITE MODIFICARLO-->
         	<input type="phone" class="form-control" name="number_phone" value="<?php echo $datos[2] ?>" placeholder="992602332" required="required">
         </div>
 		
 		<div class="form-group">
+			<!--ENVIA LOS DATOS QUE HAN SIDO MODIFICADOS EN EL FORMULARIO-->
             <button type="submit" class="btn btn-success btn-lg btn-block">Update</button>
         </div>
     </form>
+    <!--PERMITE REGRESAR A LA VISTA GENERAL DE LOS USUARIOS EN CUALQUIER MOMENTO-->
 	<div class="text-center">Presiona aquí para -><a href="index.php"> Regresa a la tabla</a></div>
 </div>
 </body>
