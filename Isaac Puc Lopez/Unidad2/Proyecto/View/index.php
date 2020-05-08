@@ -1,3 +1,4 @@
+<!--Codigo que conecta con el PHP de Login que confirma si la cuenta y la contra es correcta para dirigir al usuario a la pagina -->
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
@@ -33,6 +34,7 @@ if (!isset($_SESSION['user'])) {
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
+								<!--Establecimiento de los apartados de la paginas-->
 								<li class="current"><a href="index.php">Inicio</a></li>
 								<li><a href="nota.php">Generar nota</a></li>
 								<li><a href="grafica.php">Kilos lavados (Gráfica)</a></li>
@@ -44,6 +46,7 @@ if (!isset($_SESSION['user'])) {
 
 					<!-- Banner -->
 						<section id="banner">
+							<!--Establecimiento del contenido del apartado de Inicio-->
 							<header>
 								<h2>Precios de lavado</h2>
 								<table class="table-hover" id="tabla_precios">

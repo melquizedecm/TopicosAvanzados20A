@@ -18,6 +18,7 @@ Envio de un Email
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 form-group">
+                        <!-- Aqui podremos todo los datos para poder enviar nuestro correo, las cosas tipicas-->
                         <label>
                             Nombre:
                         </label>
@@ -58,6 +59,7 @@ Envio de un Email
         <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript">
         </script>
         <script>
+            //Si todo salio bien con la pagina de EmailJS podremos nuestro user code que se nos ha brindado a continuacion
             (function(){
                 emailjs.init("user_4dddheVcWCY01MqqS8V5J");
              })();
@@ -79,7 +81,7 @@ Envio de un Email
                             message: this.message,
                             subject: this.subject,
                         };
-                        
+                        // La pagina confirmara si el envio fue un exito o un fracaso gracias a las siguientes funciones:
                         emailjs.send("default_service","template_TqPUwDlA", data)
                         .then(function(response) {
                             if(response.text === 'OK'){

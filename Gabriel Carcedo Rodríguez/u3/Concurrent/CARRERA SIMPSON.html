@@ -1,0 +1,103 @@
+<!--/**********************************************************************************
+*************************************************************************************** 
+
+# Program Name: CARRERA SIMPSON.html
+# Authors: Gabriel Carcedo Rodríguez
+# Description: Juego de carrera con programción multihilo
+# 			   con temática en los Simpson.
+#
+#Funciones:
+# cars(numero, etiquetaNombre, etiqueta, img, fin) //función que realiza la carrera.
+# ejecutar() // llama a cars y crea los objetos que estarán en la carrera.
+# finalizar() // para que determine el final de la carrera.
+
+*************************************************************************************
+*************************************************************************************/-->
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<!--LLAMADO A LA LIBRERÍA jQuery PARA EL DISEÑO DE LA CLASE-->
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+		<!--LLAMADA A LA LIBRERÍA CONCURRENT THREAD PARA USO DEL PARADIGMA MULTIHILO-->
+		<script src="Concurrent.Thread.Compiler.js" type="text/javascript"></script>
+
+		<!--SCRIPT QUE ALBERGA LAS FUNCIONES QUE DEFINEN EL FUNCIONAMEINTO DEL PROGRAMA-->
+		<script>
+			
+			//FUNCIÓN QUE RECIBE UN CÚMULO DE ENTRADAS PREVIAS Y OBJETOS
+			//Y SE ENCARGA DE REALIZAR LA CONCURRENCIA Y LA CARRERA EN SÍ
+			function cars(numero, etiquetaNombre, etiqueta, img, fin)
+			{
+				//BUCLE QUE DETERMINA EL AVANCE DE LOS OBJETOS EN LA CARRERA 
+				//OBSERVEMOS, QUE TRABAJA CONCURRENTEMENTE CON TODOS LOS OBJETOS
+				var i = 0;
+				while(i <= fin)
+				{
+					document.getElementById(etiqueta).value= parseInt(i/10000) + " mts";
+					document.getElementById(img).style.paddingLeft= 20 + parseInt(i/1000)+"px";
+					i++;
+				}
+				
+				//VARIABLE QUE RECIBE LOS NOMBRES INGRESADOS EN LOS input´s
+				nombre = document.getElementById(etiquetaNombre).value;
+
+				//DECISIÓN QUE MUESTRA UN alert AL FINALIZAR LA CARRERA DEPENDIENDO DEL VENCEDOR
+				if(numero == 1)
+				{
+					alert("¡Marge no pudo alcanzar a Bart! - GANÓ: "+nombre);
+				}
+				else
+				{
+					alert("¡Marge alcanzó a Bart! - GANÓ: "+nombre);				}
+			}
+
+			//FUNCIÓN QUE CREA LOS OBJETOS QUE ESTARÁN EN LA CARRERA
+			//Y LLAMA A LA FUNCIÓN cars PARA QUE SE REALICE LA CARRERA
+			function ejecutar()
+			{
+				document.getElementById("img1").style.display="inline";
+				document.getElementById("img2").style.display="inline";
+				Concurrent.Thread.create(cars, 1, "name1", "input1", "img1", 1300000);
+				Concurrent.Thread.create(cars, 2, "name2", "input2", "img2", 1300000);
+			}
+
+			//FUNCIÓN PARA FINALIZAR EL PROGRAMA
+			function finalizar()
+			{
+				//PERMANECE VACÍA PORQUE YA DEFINIMOS QUE 
+				//APARECIERA UN alert AL CULMINAR LA CARRERA
+			}
+
+		</script>
+
+		<title>SIMPSON CARS PLAY</title>
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<!--BODY QUE CONTIENE EL FONDO QUE TENDRÁ NUESTRA CARRERA (LA PISTA)-->
+	<body background="foto.png">
+
+		<!--ETIQUETAS PARA INGRESAR LOS NOMBRES DE LOS JUGADORES-->
+		<label>Player 1  (Bart): </label>
+		<input type="text" id="name1"/><br>
+		<label>Player 2 (Marge): </label>
+		<input type="text" id="name1"/><br>
+
+		<!--BOTÓN PARA LLAMAR A LA FUNCIÓN ejecutar Y EMPEZAR LA CARRERA-->
+		<button onclick="ejecutar();">Comenzar Persecución</button><br>
+		<br>
+		<br>
+
+		<!--div QUE DETERMINA LA POSICIÓN Y ATRIBUTOS CON LOS QUE INICIARÁN 
+		Y TENDRÁN LAS IMÁGENES DE LOS PLAYER'S-->
+		<div style="position: center;">
+			<img src="bart.gif" width="100" style="display: none; padding-left: 
+			20px" id="img1"><input type="text" size="7" id="input1" readonly/><br>
+			<img src="marge.gif" width="100" style="display: none; padding-left: 
+			20px" id="img2"><input type="text" size="7" id="input2" readonly/><br>
+		</div>
+	</body>
+</html>

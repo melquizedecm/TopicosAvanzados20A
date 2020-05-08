@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Game by CubaCarcedo</title>
+    <style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="960" height="640"></canvas>
+
+<script>
+	//ZONA DE VARIABLES:
+
+	//CREACIÓN DEL CANVAS O LIENZO
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+
+	//VARIABLES X e Y
+	var x = canvas.width/2;
+	var y = canvas.height-30;
+
+	//SUMADORES PARA X e Y
+	var dx = 3;
+	var dy = -3;
+
+	//RADIO DE LA BOLA
+	var ballRadius = 10;
+
+	//VARIABLES DE LA PALETA DE GOLPEO
+	var paddleHeight = 10;
+	var paddleWidth = 75;
+	var paddleX = (canvas.width-paddleWidth)/2;
+
+	//VARIABLES DE PULSACIÓN
+	var rightPressed = false;
+	var leftPressed = false;
+	
+	//VARIABLES DEL MURO DE LADRILLOS
+	var brickRowCount = 6;
+	var brickColumnCount = 10;
+	var brickWidth = 75;
+	var brickHeight = 20;
+	var brickPadding = 10;
+	var brickOffsetTop = 50;
+	var brickOffsetLeft = 55;
+	//MATRIZ PARA ALMACENAR LOS LADRILLOS
+	var bricks = [];
+	for(c=0; c<brickColumnCount; c++)
+	{
+	    bricks[c] = [];
+	    for(r=0; r<brickRowCount; r++)
+	    {
+	        bricks[c][r] = { x: 0, y: 0, status: 1 };
+	    }
+	}
+
+	//VARIABLE DE PUNTAJE
+	var score = 0;
+
+	//VARIABLE DE LAS VIDAS
+	var lives = 3;
+
+	//EVENTOS DE LAS TECLAS DE MOVIMIENTO DE LAS FLECHAS
+	document.addEventListener("keydown", keyDownHandler, false);
+	document.addEventListener("keyup", keyUpHandler, false);
+	//EVENTO DEL MOVIEMIENTO DEL RATÓN
+	document.addEventListener("mousemove", mouseMoveHandler, false);
+
+	
+
+
+	//ZONA DE FUNCIONES:
+
+	//FUNCIONES DE PULSADO
+	function keyDownHandler(e)
+	{
+	    //PRESIÓN DE LA FLECHA DERECHA
+	    if(e.keyCode == 39)
+	    {
+	        rightPressed = true;
+	    }
+	    //PRESIÓN DE LA FLECHA IZQUIERDA
+	    else if(e.keyCode == 37)
+	    {
+	        leftPressed = true;
+	    }
+	}
+
+	function keyUpHandler(e)
+	{
+	    //AL SOLTAR LA FLECHA DERECHA
+	    if(e.keyCode == 39)
+	    {
+	        rightPressed = false;
+	    }
+	    //AL SOLTAR LA FLECHA IZQUIERDA
+	    else if(e.keyCode == 37)
+	    {
+	        leftPressed = false;
+	    }
+	}
+
+	//FUNCIÓN PARA DETECTAR EL MOVIMIENTO DEL RATÓN
+	function mouseMoveHandler(e)
+	{
+	    var relativeX = e.clientX - canvas.offsetLeft;
+	    if(relativeX > 0 && relativeX < canvas.width)
+	    {
+	        paddleX = relativeX - paddleWidth/2;
+	    }
+	}
+
+	//FUNCIÓN DE COALISIÓN CON LOS LADRILLOS
+	function collisionDetection()
+	{
+	    for(c=0; c<brickColumnCount; c++)
+	    {
+	        for(r=0; r<brickRowCount; r++)
+	        {
+	            var b = bricks[c][r];
+	            if(b.status == 1)
+	            {
+	                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight)
+	                {
+	                    dy = -dy;
+	                    b.status = 0;
+	                    score++;
+
+	                    if(score == brickRowCount*brickColumnCount)
+	                    {
+                        	alert("YOU WIN, CONGRATULATIONS !!!");
+                        	document.location.reload();
+                    	}
+	                }
+	            }
+	        }
+	    }
+	}
+
+	//ESCRIBIR EL PUNTAJE QUE SE OBTIENE
+	function drawScore()
+	{
+	    ctx.font = "16px Arial bold";
+	    ctx.fillStyle = "#000000";
+	    ctx.fillText("PUNTOS: "+score, 30, 20);
+	}
+
+	//MOSTRAR LAS VIDAS DEL JUGADOR
+	function drawLives()
+	{
+	    ctx.font = "16px Arial bold";
+	    ctx.fillStyle = "#000000";
+	    ctx.fillText("VIDAS: "+lives, canvas.width-100, 20);
+	}
+
+	//FUNCIÓN PARA DIBUJAR LA BOLA
+	function drawBall()
+	{
+	    ctx.beginPath();
+	    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+	    ctx.fillStyle = "#0021FF";
+	    ctx.fill();
+	    ctx.closePath();
+	}
+
+	//CREACIÓN DE LA PALETA DE GOLPEO
+	function drawPaddle()
+	{
+	    ctx.beginPath();
+	    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+	    ctx.fillStyle = "#0021FF";
+	    ctx.fill();
+	    ctx.closePath();
+	}
+
+	//FUNCIÓN PARA DIBUJAR LOS LADRILLOS
+	function drawBricks()
+	{
+	    for(c=0; c<brickColumnCount; c++)
+	    {
+	        for(r=0; r<brickRowCount; r++)
+	        {
+	            if(bricks[c][r].status == 1)
+	            {
+	                var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+	                var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+	                bricks[c][r].x = brickX;
+	                bricks[c][r].y = brickY;
+	                ctx.beginPath();
+	                ctx.rect(brickX, brickY, brickWidth, brickHeight);
+	                ctx.fillStyle = "#1ABC9C";
+	                ctx.fill();
+	                ctx.closePath();
+	            }
+	        }
+	    }
+	}
+
+	//FUNCIÓN PARA HACER MOVER LA BOLA
+	function draw()
+	{
+	    ctx.clearRect(0, 0, canvas.width, canvas.height);
+	    
+	    drawBall();
+	    drawPaddle();
+	    drawBricks();
+	    collisionDetection();
+	    drawScore();
+	    drawLives();
+
+	    //HACER QUE REBOTE EN LAS PAREDES
+	    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius)
+	    {
+	        dx = -dx;
+	    }
+	    //HACER QUE EN EL PISO SÓLO REBOTE EN LA PALETA
+	    if(y + dy < ballRadius)
+	    {
+		    dy = -dy;
+		} 
+		else if(y + dy > canvas.height-ballRadius)
+		{
+		    if(x > paddleX && x < paddleX + paddleWidth)
+		    {
+		        dy = -dy;
+		    }
+		    else
+		    {
+		        lives--;
+				if(!lives)
+				{
+				    alert("GAME OVER");
+				    document.location.reload();
+				}
+				else
+				{
+				    x = canvas.width/2;
+				    y = canvas.height-30;
+				    dx = 2;
+				    dy = -2;
+				    paddleX = (canvas.width-paddleWidth)/2;
+				}
+		    }
+		}
+
+		//MOVIMIENTO DE LA PALETA
+	    if(rightPressed && paddleX < canvas.width-paddleWidth)
+	    {
+		    paddleX += 5;
+		}
+		else if(leftPressed && paddleX > 0)
+		{
+		    paddleX -= 5;
+		}
+
+		//SUMADORES
+	    x += dx;
+	    y += dy;
+
+	    //PARA REFRESCAR EL NAVEGADOR
+	    requestAnimationFrame(draw);
+	}
+	draw();
+</script>
+
+</body>
+</html>
