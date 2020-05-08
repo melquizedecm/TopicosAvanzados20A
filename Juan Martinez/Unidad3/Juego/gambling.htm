@@ -1,0 +1,387 @@
+<!--********************************************************************************************
+# Program Name: Program16.html
+# Authors: Juan Martinez Aké
+# Description:  Juego Hecho con JS
+#
+#Funciones:
+#Codigo en JS para el desarrollo de juegos
+#
+******************************************************************************
+-->
+<html>
+<head>
+	<title>Maquina tragamonedas</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body onLoad="document.score.totaal.value='100'">
+<!--
+Creacion de la tabla donde estaran sus respectivos estilos para el funcionamiento
+y donde se mostraran las instruccion del juego
+-->
+<table width="350" align="center" border="1">
+<tr><td valign="top">
+<table>
+<tr>
+	<td><img src="9.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="9.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="9.gif" width="25" height="25" alt="" border="0"></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td><img src="8.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="8.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="8.gif" width="25" height="25" alt="" border="0"></td>
+	<td>100</td>
+</tr>
+<tr>
+	<td><img src="anyo.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="anyo.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="anyo.gif" width="25" height="25" alt="" border="0"></td>
+	<td>4</td>
+</tr>
+<tr>
+	<td><img src="anye.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="anye.gif" width="25" height="25" alt="" border="0"></td>
+	<td><img src="anye.gif" width="25" height="25" alt="" border="0"></td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>Ninguno </td>
+	<td colspan="2"><img src="0.gif" width="25" height="25" alt="" border="0" align="left"></td>
+	<td>0-20</td>
+</tr>
+<tr>
+<td colspan="4"><font size="1">Cuando se forma una de estas combinaciones, puede tomar una
+apuesta y duplique sus ganancias haciendo clic en la bola ocho o la bola nueve. <br>
+Por supuesto, tambien puedes llevarte tus ganancias...</font></td>
+</tr>
+
+<!--
+Creacion de la tabla donde estara el juego
+con sus respectivos estilos para el funcionamiento y codigo en JS
+-->
+</table></td><td>
+<table width="300" align="center" border="0">
+<tr>
+	<td align="center"><img src="0.gif" width="50" height="50" alt="" border="0" name="bal1"></td>
+	<td align="center"><img src="0.gif" width="50" height="50" alt="" border="0" name="bal2"></td>
+	<td align="center"><img src="0.gif" width="50" height="50" alt="" border="0" name="bal3"></td>
+</tr>
+
+</table>
+<p>
+<div style="visibility: hidden;" ID="gokken" name="gokken" class="gokken">
+<table width="300" align="center" border="0">
+<tr>
+	<td colspan="2" align="center"><img src="ani.gif" width="50" height="50" alt="" border="0" name="ani" OnMouseOver="document.ani.src='ani.gif'"></td>
+</tr>
+<tr>
+	<td align="center"><a href="#" onMouseDown="gokk('acht')" OnMouseUp="document.ani.src='ani.gif'"><img src="8.gif" width="50" height="50" alt="" border="0" name="bacht"></a></td>
+	<td align="center"><a href="#" onMouseDown="gokk('negen')" OnMouseUp="document.ani.src='ani.gif'"><img src="9.gif" width="50" height="50" alt="" border="0" name="bnegen"></a></td>
+</tr>
+<tr>
+	<td colspan="2"><a href="#" OnMouseDown="neem()">Toma las ganancias!</a></td>
+</tr>
+</table>
+</div>
+<p>
+<!--
+	la tabla donde se mostraran los resultados obtenidos por partida
+	hasta que se finalize y pueda comenzar nuevo juego
+-->
+<table width="300" align="center" border="0">
+<tr><td align="right"><form name="gogo"><input type="button" onMouseDown="draai()" onMouseUp="rand1()" value="Jugar!" name="butt"></form>
+<form name="score"></td></tr>
+<tr><td>
+Ganancias:<input type="text" name="winst" size="4" style="border-style: none; font-size: 25px; font-family: 'Comic Sans MS';" readonly=""><br>
+Total:<input type="text" name="totaal" size="4" style="border-style: none; font-size: 25px; font-family: 'Comic Sans MS';" readonly>
+</form></td></tr>
+</table></td></tr></table>
+
+<!--
+Codigo JS con sus respectivas variables por ronda donde
+genera partidas de manera aleatoria
+-->
+<script language="Javascript">
+
+/*
+ Se inicializa la primera funcion donde estaran declararas las rondas por juego
+ junto con sus respectivas variables y muestre de manera aleatoria los gif seleccionados para la partida
+*/
+function rand1(){
+	if (document.score.totaal.value==1){
+		document.location.href="toobad.htm";
+		}
+	document.score.totaal.value=document.score.totaal.value-1;
+	document.score.winst.value=0;
+	var r1=Math.random();
+	var rn1=15*r1;
+	var round1=Math.round(rn1);
+	document.bal1.src=""+round1+".gif";
+
+	var r2=Math.random();
+	var rn2=15*r2;
+	var round2=Math.round(rn2);
+	document.bal2.src=""+round2+".gif";
+
+	var r3=Math.random();
+	var rn3=15*r3;
+	var round3=Math.round(rn3);
+	document.bal3.src=""+round3+".gif";
+
+	if (round1==1){
+	var b1="effen"
+	}
+	if (round1==2){
+	var b1="effen"
+	}
+	if (round1==3){
+	var b1="effen"
+	}
+	if (round1==4){
+	var b1="effen"
+	}
+	if (round1==5){
+	var b1="effen"
+	}
+	if (round1==6){
+	var b1="effen"
+	}
+	if (round1==7){
+	var b1="effen"
+	}
+	if (round1==10){
+	var b1="streep"
+	}
+	if (round1==11){
+	var b1="streep"
+	}
+	if (round1==12){
+	var b1="streep"
+	}
+	if (round1==13){
+	var b1="streep"
+	}
+	if (round1==14){
+	var b1="streep"
+	}
+	if (round1==15){
+	var b1="streep"
+	}
+	if (round1==8){
+	var b1="acht"
+	}
+	if (round1==9){
+	var b1="negen"
+	}
+	if (round1==0){
+	var b1="wit"
+	}
+
+	if (round2==1){
+	var b2="effen"
+	}
+	if (round2==2){
+	var b2="effen"
+	}
+	if (round2==3){
+	var b2="effen"
+	}
+	if (round2==4){
+	var b2="effen"
+	}
+	if (round2==5){
+	var b2="effen"
+	}
+	if (round2==6){
+	var b2="effen"
+	}
+	if (round2==7){
+	var b2="effen"
+	}
+	if (round2==10){
+	var b2="streep"
+	}
+	if (round2==11){
+	var b2="streep"
+	}
+	if (round2==12){
+	var b2="streep"
+	}
+	if (round2==13){
+	var b2="streep"
+	}
+	if (round2==14){
+	var b2="streep"
+	}
+	if (round2==15){
+	var b2="streep"
+	}
+	if (round2==8){
+	var b2="acht"
+	}
+	if (round2==9){
+	var b2="negen"
+	}
+	if (round2==0){
+	var b2="wit"
+	}
+
+	if (round3==1){
+	var b3="effen"
+	}
+	if (round3==2){
+	var b3="effen"
+	}
+	if (round3==3){
+	var b3="effen"
+	}
+	if (round3==4){
+	var b3="effen"
+	}
+	if (round3==5){
+	var b3="effen"
+	}
+	if (round3==6){
+	var b3="effen"
+	}
+	if (round3==7){
+	var b3="effen"
+	}
+	if (round3==10){
+	var b3="streep"
+	}
+	if (round3==11){
+	var b3="streep"
+	}
+	if (round3==12){
+	var b3="streep"
+	}
+	if (round3==13){
+	var b3="streep"
+	}
+	if (round3==14){
+	var b3="streep"
+	}
+	if (round3==15){
+	var b3="streep"
+	}
+	if (round3==8){
+	var b3="acht"
+	}
+	if (round3==9){
+	var b3="negen"
+	}
+	if (round3==0){
+	var b3="wit"
+	}
+	/*
+	 Se inicializa los puntajes para las posibles combinaciones correctas que salen de manera  aleatorias
+	 y llevar un control con las ganancias
+	*/
+	if (b1==b2){
+		if (b2==b3){
+			if (b1=="streep"){
+				document.score.winst.value="4"
+				}
+			if (b1=="effen"){
+				document.score.winst.value="2"
+				}
+			if (b1=="negen"){
+				document.score.winst.value="200"
+				}
+			if (b1=="acht"){
+				document.score.winst.value="100"
+				}
+			}
+		}
+	if (b1=="wit"){
+		var wit2=Math.random();
+		var witn2=20*wit2;
+		var witr2=Math.round(witn2);
+		document.score.winst.value=witr2;
+		}
+	if (b2=="wit"){
+		var wit2=Math.random();
+		var witn2=20*wit2;
+		var witr2=Math.round(witn2);
+		document.score.winst.value=witr2;
+		}
+	if (b3=="wit"){
+		var wit2=Math.random();
+		var witn2=20*wit2;
+		var witr2=Math.round(witn2);
+		document.score.winst.value=witr2;
+		}
+		if (document.score.winst.value>0){
+			document.all.gokken.style.visibility="visible";
+			document.ani.src="ani.gif";
+			document.gogo.butt.style.visibility="hidden";
+			}
+	if (document.score.winst.value>150){
+		window.alert("JACKPOT!")
+		neem();
+		}
+	}
+	/*
+	 Se inicializa la segunda funcion donde estaran declararas el total
+	 de las ganancias generadas por ronda que aumentaran al total para proseguir con el juego 
+	*/
+function neem(){
+	var winst=Number(document.score.winst.value);
+	var totaal=Number(document.score.totaal.value);
+	document.score.totaal.value= totaal + winst;
+	document.score.winst.value=0
+	document.all.gokken.style.visibility="hidden";
+	document.gogo.butt.style.visibility="visible";
+	}
+	/*
+	 Se inicializa la tercera funcion donde estaran declararas el numero de rondas
+	 jugadas hasta que se desea finalizar llevando un control con las intrucciones
+	 en seleccion de algun gif
+	*/
+function gokk(wat){
+	gok=wat
+	var gok1=Math.random();
+	var gokn1=gok1+1;
+	var gokje1=Math.round(gokn1);
+	if (gokje1==1){
+		document.ani.src="8.gif";
+		}
+	if (gokje1==2){
+		document.ani.src="9.gif";
+		}
+	if (gok=="acht"){
+			if (gokje1==1){
+				document.score.winst.value=document.score.winst.value*2;
+				}
+			if (gokje1==2){
+				document.score.winst.value=0;
+				neem();
+				}
+		}
+	if (gok=="negen"){
+			if (gokje1==2){
+				document.score.winst.value=document.score.winst.value*2;
+				}
+			if (gokje1==1){
+				document.score.winst.value=0;
+				neem();
+				}
+		}
+	if (document.score.winst.value>150){
+		window.alert("JACKPOT!")
+		neem();
+		}
+	}
+
+function draai(){
+	document.bal1.src="draai1.gif";
+	document.bal2.src="draai2.gif";
+	document.bal3.src="draai3.gif";
+	}
+
+	</script>
+</body>
+</html>
