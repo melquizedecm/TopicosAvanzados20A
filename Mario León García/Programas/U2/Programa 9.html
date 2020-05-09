@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <!--
-Source:     Inicio.html.
-Description:  Pagina de inicio de la lavandería La Piramide
-Date      20/Feb/20.
-Author:     Proyecto IMI.
+Source:         Program 9.html
+Description:    Tabla resposiva y que se puede ordenar
+Date:           21/Feb/20
+Author: 		Mario Steven León García
+
 -->
-
 <html>
-	<head>
+    <head>
+ <!--******************************************************************************************-->
+ 		<!--Liberias-->
+    	<script src ="https://code.jquery.com/jquery-3.3.1.js"> </script>
+    	<script src ="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    	<script>
+    			$(document).ready(function() {
+    				$('#example').DataTable({
+    					"orden" : [[3,"desc"]]
+    				});
+				} );
+    	</script>
+ <!--******************************************************************************************-->
+        <title>Programa 9</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+ <!--******************************************************************************************-->   	
+        <div>TODO write content</div>
 
-		<script src ="https://code.jquery.com/jquery-3.3.1.js"></script>
-		<script src ="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-		<script>
-			$(document).ready(function() {
-			    $('#example').DataTable({
-
-			    	"order":[[3,"asc"]],
-			    	"order":[[2,"desc"]],
-			    	"columnDefs":[{
-			    		"targets":[2],
-			    		"visible":false,
-			    		"searchable":false
-			    	}]
-			    });
-			});
-		</script>
-	</head>
-<body>
-	<table id="example" class="display" style="width:100%">
+        <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
+            	<!--Barra inicial para poder saber que información meter-->
                 <th>Name</th>
                 <th>Position</th>
                 <th>Office</th>
@@ -40,6 +42,7 @@ Author:     Proyecto IMI.
             </tr>
         </thead>
         <tbody>
+        	<!--Datos de las personas respecto a la barra inicial-->
             <tr>
                 <td>Tiger Nixon</td>
                 <td>System Architect</td>
@@ -508,5 +511,6 @@ Author:     Proyecto IMI.
             </tr>
         </tfoot>
     </table>
-</body>
+<!--******************************************************************************************-->
+    </body>
 </html>

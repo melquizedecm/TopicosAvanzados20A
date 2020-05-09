@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Fuente: Carrera
+Descripcion: Example of game
+Fecha: 24/Abril/2020
+Autor: Mario Steven León García
+-->
+<html>
+    <head>
+        	<!--Libería usada-->
+        <script src="Concurrent.Thread.Compiler.js" type="text/javascript"></script>
+        <script>
+            //Función para poder tener todos los datos del Corredor ya sea número, etiqueta, imagen, meta.
+            function Corredor(numero, etiquetaNombre, etiqueta, img, fin){
+                var i = 0;
+                var a = 0;
+                while(i <= 100000){
+                    document.getElementById(etiqueta).value = parseInt(i / 1000) + " Metros"; //Muestra en metos cuantros metros a avanzado el corredor
+                    document.getElementById(img).style.paddingLeft=100 + parseInt(i / 100) + "px";//Controla la imagen del nadador conforme a "i" y "a"
+                    i++;
+                    a++;
+                }
+                while(i <= 200000){
+                    document.getElementById(etiqueta).value = parseInt(i / 1000) + " Metros"; //Lo mismo que lo de arriba pero inviertiendo el movimento
+                    document.getElementById(img).style.paddingLeft=100 + parseInt(a / 100) + "px";
+                    i++;
+                    a--;
+                }
+                nombre = document.getElementById(etiquetaNombre).value; //Este consigue el nombre del corredor
+                alert("Cruzó la meta el corredor: "+numero+".- "+ nombre); //Alerta acerca del corredor que cruzó la meta
+            }
+
+
+            function ejecutar(){
+                document.getElementById("img1").style.display="inline";
+                document.getElementById("img2").style.display="inline";
+                document.getElementById("img3").style.display="inline";
+                Concurrent.Thread.create(Corredor, 1,"Corredor1", "input1", "img1", 200000);//crea un hilo que a su vez llama a la funcion Corredor y le pasa los parámetros que se necesitan 
+                Concurrent.Thread.create(Corredor, 2,"Corredor2", "input2", "img2", 200000);
+                Concurrent.Thread.create(Corredor, 3,"Corredor3", "input3", "img3", 200000);
+            }
+
+        </script>
+        <title>Carrera 200m</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+    </head>
+     <body background="Track.jpg" style="background-repeat: no-repeat; background-size: 100%"> <!--Muestra la imagen de fondo ampliada al tamaño de la pantalla-->
+
+        <label>Nombre Corredor 1:</label> <!--Muestra en pantalla el texto-->
+        <input type="text" id="Corredor1"></br><!--campo de entrada que toma el nombre del nadador-->
+        <label>Nombre Corredor 2:</label>
+        <input type="text" id="Corredor2"></br>
+        <label>Nombre Corredor 3:</label>
+        <input type="text" id="Corredor3"></br>
+
+        <button onclick="ejecutar();">Iniciar carrera</button></br> <!--al presionar el botón llama a la función ejecutar que se creo anteriormente-->
+        </br>
+        </br>
+
+        <div style="position: center;"></div> 
+        <!--crea la imagen en la pantalla pero a su vez la hace no visible, el input muestra unicamente la distancia que recorre el nadador-->
+        <img src="Corredor2L.gif" width="100" style="display: none; padding-left: 400px" id="img1"><input type="text" size="7" id="input1" readonly></br>
+        <img src="Corredor1L.gif" width="100" style="display: none; padding-left: 400px" id="img2"><input type="text" size="7" id="input2" readonly></br>
+        <img src="Corredor3L.gif" width="100" style="display: none; padding-left: 400px" id="img3"><input type="text" size="7" id="input3" readonly></br>
+        <img src="Corredor2R.gif" width="100" style="display: none; padding-left: 400px" id="img4"></br>
+        <img src="Corredor1R.gif" width="100" style="display: none; padding-left: 400px" id="img5"></br>
+        <img src="Corredor3R.gif" width="100" style="display: none; padding-left: 400px" id="img6"></br>
+
+    </body>
+</html>
