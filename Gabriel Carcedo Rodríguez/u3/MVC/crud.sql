@@ -26,11 +26,11 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `users` (
-`id_user` int(11) NOT NULL,
+CREATE TABLE `clientes` (
+`id_clientes` int(11) NOT NULL,
 `full_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-`number_phone` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-`fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+`number_phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`direccion` varchar(120) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -40,8 +40,8 @@ CREATE TABLE `users` (
 --
 -- Indices de la tabla `users`
 --
-ALTER TABLE `users`
-ADD PRIMARY KEY (`id_user`);
+ALTER TABLE `clientes`
+ADD PRIMARY KEY (`id_clientes`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -50,8 +50,8 @@ ADD PRIMARY KEY (`id_user`);
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
-ALTER TABLE `users`
-MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+ALTER TABLE `clientes`
+MODIFY `id_clientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
