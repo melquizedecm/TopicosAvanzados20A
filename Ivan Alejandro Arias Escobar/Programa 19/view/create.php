@@ -1,4 +1,4 @@
-<!--LLAMAMOS AL ARCHIVO usersController PARA HACER USO DE SUS FUNCIONES-->
+<!--Hacemos llamada al usersController para empezar a usar sus funciones-->
 <?php require_once("../controller/usersController.php"); ?>
 
 <!DOCTYPE html>
@@ -107,22 +107,21 @@
 <body>
 <div class="signup-form">
     <form action="" method="post">
-    	<!--LE DAMOS EL TITULO AL FROMULARIO PARA QUE TENGA VISTA-->
+    	<!--Titulo Del Espacio-->
 		<h2>Registro</h2>
 		<p class="hint-text">Crea un nuevo registro de nota.</p>
-		<!--MOSTRARÁ UN MENSAJE UNA VEZ REALIZADA LA FUNCION DE CREAR, YA SEA EXITOSA 
-			O FALLIDA PARA QUE EL USUARIO CONOZCA LO QUE SUCEDIÓ-->
+		<!--Aparecera un mensaje en caso de que el registro no se haya realizado con exito-->
 		<p class="hint-text"><?php if(isset($mensaje)) {echo $mensaje; } ?></p>
 		
         <div class="form-group">
 			<div class="row">
-				<!--LE PONEMOS EL IDENTIFICADOR AL INPUT PARA HACER USO DE LA INFORMACION INGRESADA EN LAS FUNCIONES-->
+				<!--Agregamos un pequeño texto para que el usuario se de una idea de que información debe poner-->
 				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_create" placeholder="Client_Name" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<!--LE PONEMOS EL IDENTIFICADOR AL INPUT PARA HACER USO DE LA INFORMACION INGRESADA EN LAS FUNCIONES-->
+        	<!--Agregamos un pequeño texto para que el usuario se de una idea de que información debe poner-->
         	<input type="phone" class="form-control" name="number_phone" placeholder="Total A Pagar" required="required">
         </div>
 		
@@ -130,7 +129,7 @@
             <button type="submit" class="btn btn-success btn-lg btn-block">Registrar</button>
         </div>
     </form>
-    <!--NOS PERMITE REGRESAR A LA VISTA GENEREAL DE LOS USUARIOS EN CUALQUIER MOMENTO-->
+    <!--Pequeño texto para poder regresar a la vista principal-->
 	<div class="text-center">Presiona aquí para -><a href="index.php"> Regresa a la tabla</a></div>
 </div>
 </body>
