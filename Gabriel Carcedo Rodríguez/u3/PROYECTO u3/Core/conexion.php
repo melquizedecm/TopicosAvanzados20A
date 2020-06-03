@@ -1,6 +1,6 @@
 <?php  
 
-//configarar variables
+//configurar variables
 DBserver = "localhost";
 DBuser = "";
 DBpass = "";
