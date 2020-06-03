@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************************************************************
 # Program Name: Envio de correo
-# Authors: Juan Martinez Aké
+# Authors: Juan Martinez Aké, Miguel Pech Mena
 # Description:  Envio de correo con libreria en JS
 #
 #Funciones:

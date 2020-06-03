@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************************************************************
-# Program Name: Grafica de PIE y BAR
-# Authors: Juan Martinez Aké
+# Program Name: Grafica de BAR
+# Authors: Juan Martinez Aké, Miguel Pech Mena
 # Description:  Graficas con libreria en JS
 #
 #Funciones:
