@@ -1,0 +1,52 @@
+<!--
+Sorce: Grafica.html
+Description: Use of the librery for Graphics
+Date: 16/Mar/2020
+Author: Gabriel Carcedo Rodríguez
+        Lizzie G. Medina Cetina
+        Daniel O. Bacab González
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+//CREA LA VARIABLE DE LA GRÁFICA
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Ventas anuales"
+	},
+	//RELLENA LA GRÁFICA CON LOS DATOS
+	data: [{
+		type: "pie",
+		startAngle: 440,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 8.33, label: "Enero"},
+			{y: 8.33, label: "Febrero"},
+			{y: 8.33, label: "Marzo"},
+			{y: 8.33, label: "Abril"},
+			{y: 8.33, label: "Mayo"},
+			{y: 8.33, label: "Junio"},
+			{y: 8.33, label: "Julio"},
+			{y: 8.33, label: "Agosto"},
+			{y: 8.33, label: "Septiembre"},
+			{y: 8.33, label: "Octubre"},
+			{y: 8.33, label: "Noviembre"},
+			{y: 8.33, label: "Diciembre"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<!--LIBRERÍA PARA LA CREACIÓN DE LA GRÁFICA-->
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+<script src="../../../Lib/canvasjs.min.js"></script>
+</body>
+</html>
