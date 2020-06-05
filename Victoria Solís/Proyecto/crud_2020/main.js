@@ -28,7 +28,7 @@ $("#btnNuevo").click(function(){
     $("#formPersonas").trigger("reset");
     $(".modal-header").css("background-color", "#28a745");
     $(".modal-header").css("color", "white");
-    $(".modal-title").text("Nueva Persona");            
+    $(".modal-title").text("Nuevo");            
     $("#modalCRUD").modal("show");        
     id=null;
     opcion = 1; //alta
@@ -39,14 +39,14 @@ var fila; //capturar la fila para editar o borrar el registro
 //botón EDITAR    
 $(document).on("click", ".btnEditar", function(){
     fila = $(this).closest("tr");
-    id = parseInt(fila.find('td:eq(0)').text());
+    
     nombre = fila.find('td:eq(1)').text();
-    pais = fila.find('td:eq(2)').text();
-    edad = parseInt(fila.find('td:eq(3)').text());
+    facebook= fila.find('td:eq(2)').text();
+    n_cel= fila.find('td:eq(2)').text();
     
     $("#nombre").val(nombre);
-    $("#pais").val(pais);
-    $("#edad").val(edad);
+    $("#facebook").val(facebook);
+    $("#n_cel").val(n_cel);
     opcion = 2; //editar
     
     $(".modal-header").css("background-color", "#007bff");
@@ -78,21 +78,21 @@ $(document).on("click", ".btnBorrar", function(){
 $("#formPersonas").submit(function(e){
     e.preventDefault();    
     nombre = $.trim($("#nombre").val());
-    pais = $.trim($("#facebook").val());
-    edad = $.trim($("#n_cel").val());    
+    facebook= $.trim($("#facebook").val());
+    n_cel= $.trim($("#n_cel").val());    
     $.ajax({
         url: "bd/crud.php",
         type: "POST",
         dataType: "json",
-        data: {nombre:nombre, facebook:facebook, n_cel:n_cel, id:id, opcion:opcion},
+        data: {nombre:nombre, facebook:facebook, n_cel:n_cel,  opcion:opcion},
         success: function(data){  
             console.log(data);
-            id = data[0].id;            
+                        
             nombre = data[0].nombre;
             facebook = data[0].pais;
             n_cel = data[0].edad;
-            if(opcion == 1){tablaPersonas.row.add([id,nombre,facebook,n_cel]).draw();}
-            else{tablaPersonas.row(fila).data([id,nombre,facebook,n_cel]).draw();}            
+            if(opcion == 1){tablaPersonas.row.add([nombre,facebook,n_cel]).draw();}
+            else{tablaPersonas.row(fila).data([nombre,facebook,n_cel]).draw();}            
         }        
     });
     $("#modalCRUD").modal("hide");    
