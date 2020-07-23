@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--*************************************************************************
+# Program Name: GraficaNegocio.html
+# Authors: Josue Antonio Castro Collí. 
+# Description:  Mostrar las gráficas de la empresa donde se muestran las ventas
+                y las ganancias que producen al día, mes y año.  
+# Date: 05/Marzo/2020
+******************************************************************************
+******************************************************************************
+-->
+<html>
+    <head>
+        <title>Gráficas del negocio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 
+            Son parte de las herramientas de las graficas. 
+            # Estos dos lineas de cofigo siempre van al principio de las librerias. 
+            Librerias: 
+        -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <!--*************************************************************************** -->
+        <link rel="stylesheet" href="css/morris.css">
+
+        <!-- ../Lib/morris.min.js para la grafica-->
+        <script src="js/morris.min.js" charset="UTF-8"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Librerias para el tema de página-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <!-- Tema en Css -->
+        <link href="css/freelancer.min.css" rel="stylesheet">
+
+    </head>
+    <body id="page-top">
+
+        <!-- Navegación -->
+          <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+              <a class="navbar-brand js-scroll-trigger">Progreso de mi negocio</a>
+              <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#graficaVentas">Gráficas de ventas</a>
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#graficaGanancias">Gráficas de ganancias</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+
+<!-- ################################################################################# -->
+
+         <!-- Tope -->
+          <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+              <br></br>
+
+              <!-- Encabezado de masthead -->
+              <h1 class="masthead-heading text-uppercase mb-0">Resumen del día, mes y año</h1>
+
+              <!-- Divisor de iconos -->
+              <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+
+              <!-- Subtítulo de masthead -->
+                <p class="masthead-subheading font-weight-light mb-0">Ventas y Ganancias</p>
+
+            </div>
+          </header>
+        
+<!-- ################################################################################# -->
+
+        <!-- Sobre la sección de ventas -->
+        <section class="page-section" id="graficaVentas">
+        <div class="conteiner">
+
+            <!-- Encabezado de la sección de ventas -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Las ventas</h2>
+
+            <!-- Divisor de iconos -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+
+            <div class="row">
+                <!-- *************************************************************** -->
+                <div class="col-md-6">
+                    <center><h3>Datos:</h3>
+                        <hr>
+                    <font color="black" size="6px">
+                    1. TC - Tacos. <br/>
+                    2. B - Burritaco. <br/>
+                    3. E - Ensalada. <br/>
+                    4. TR - Tortas. <br/>
+                    5. FC - Frijoles Charros. <br/>
+                    6. BM - Burritacos Minis. <br/>
+                    </font>
+                    </center>
+                </div>
+
+
+                <!-- ´Se mostrara la primera gráfica -->
+                <div class="col-md-6">
+                    <center><h2>Día</h2></center>
+                    <hr>
+                    <div id="ventasDia"></div>
+                </div>
+
+                <!-- *************************************************************** -->
+            </div>
+            <hr>
+            
+            <div class="row">
+                <!-- *************************************************************** -->
+                <!-- Para las únicas gráficas que se encuentra abajo de la página -->
+                <div class="col-md-6">
+                    <center><h2>Mes</h2></center>
+                    <hr>
+                    <div id="ventasMes"></div>
+                </div>
+
+    
+                <div class="col-md-6">
+                    <center><h2>Año</h2></center>
+                    <hr>
+                    <div id="ventasAnio"></div>
+                </div>
+                <!-- *************************************************************** -->
+            </div>
+
+        </div>
+        </section>
+        <hr>
+
+<!-- ################################################################################# -->
+        <!-- Sección de ganancias -->
+        <section class="page-section" id="graficaGanancias">
+        <div class="conteiner">
+
+            <!-- Encabezado de la sección de ganancias -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Las ganancias</h2>
+            
+            <!-- Divisor de iconos -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+
+            <div class="row">
+                <!-- *************************************************************** -->
+                <!-- ´Se mostrara las primeras dos gráficas unidas de un lado a otro -->
+                <div class="col-md-6">
+                    <center><h2>Día</h2></center>
+                    <hr>
+                    <div id="gananciasDia"></div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <center><h2>Mes</h2></center>
+                    <hr>
+                    <div id="gananciasMes"></div>
+                </div>
+                <!-- *************************************************************** -->
+            </div>
+            <hr>
+
+            <div class="row">
+                <!-- *************************************************************** -->
+                <!-- Para la única gráfica que se encuentra abajo de la página -->
+                <div class="col-md-6">
+                    <center><h2>Año</h2></center>
+                    <hr>
+                    <div id="gananciasAnio"></div>
+                </div>
+                <!-- *************************************************************** -->
+            </div>
+
+        </div>
+        </section>
+
+<!-- ################################################################################# -->
+        <!-- Llamara al documento Lineas.js para las gráficas-->
+        <script src="js/Graficas.js" charset="UTF-8"></script>
+
+        <!-- Bootstrap JavaScript central -->
+          <script src="vendor/jquery/jquery.min.js"></script>
+          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+          <!-- Complemento JavaScript-->
+          <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+          <!-- Scripts personalizados para esta plantilla -->
+          <script src="js/freelancer.min.js"></script>
+    </body>
+</html>

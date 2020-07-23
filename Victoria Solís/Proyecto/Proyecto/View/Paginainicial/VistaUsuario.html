@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--*************************************************************************
+# Program Name: VistaUsuario.html
+# Authors: Josue Antonio Castro Collí. 
+# Description:  Una página para que el usuario dueño de la empresa pueda haceder
+				 a unas ventanas, donde en una puede hacer a pedidos, en otra registrar
+				 clientes y por ultimo ver sus estadisticas de la empresa con gráficas. 
+
+# Date: 31/Marzo/2020
+******************************************************************************
+******************************************************************************
+-->
+<html>
+    <head>
+        <title>Panel de control</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+        <!-- Librerias para el tema de página-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <!-- Tema en Css -->
+        <link href="css/freelancer.min.css" rel="stylesheet">
+
+    </head>
+    <body id="page-top">
+
+        <!-- Navegación -->
+          <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+              <a class="navbar-brand js-scroll-trigger">Panel de control</a>
+              <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ControlEmpresa">Control de empresa</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+
+<!-- ################################################################################# -->
+
+         <!-- Tope -->
+          <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+              
+              <!-- Encabezado de masthead -->
+              <h1 class="masthead-heading text-uppercase mb-0">Bien venido al centro de control de su empresa</h1>
+
+              <!-- Divisor de iconos -->
+              <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+
+
+            </div>
+          </header>
+        
+<!-- ################################################################################# -->
+
+        <!-- Sobre la sección de ventas -->
+        <section class="page-section" id="ControlEmpresa">
+        <div class="conteiner">
+
+            <!-- Encabezado de la sección de ventas -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Control de empresa</h2>
+
+            <!-- DIVISOR DE ICONOS -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <hr>
+
+
+
+            <div class="row">
+                <!-- *************************************************************** -->
+                <!--BOTÓN PARA ENTRAR A PEDIDOS -->
+                <div class="col-md-6">
+		          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#Pedido">
+		            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+		              <div class="portfolio-item-caption-content text-center text-white">
+		                <!--<i class="fas fa-plus fa-3x"></i>-->
+		              </div>
+		            </div>
+		            <center>
+		            	<img class="img-fluid" src="img/portfolio/Pedidos.png" alt="" width="400" height="404">
+		            </center>
+		          </div>
+		        </div>
+
+
+
+     			 <!--BOTÓN PARA ENTRAR A CLIENTES -->
+                <div class="col-md-6">
+		          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#clientes">
+		            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+		              <div class="portfolio-item-caption-content text-center text-white">
+		                <!--<i class="fas fa-plus fa-3x"></i>-->
+		              </div>
+		            </div>
+		            <center>
+		            	<img class="img-fluid" src="img/portfolio/Clientes.png" alt="" width="400" height="404">
+		            </center>
+		          </div>
+		        </div>
+                <!-- *************************************************************** -->
+            </div>
+            <hr>
+
+
+
+            <center>
+            	  <!-- *************************************************************** -->
+             <!--BOTÓN PARA ENTRAR A GRÁFICAS -->
+                <div class="col-md-6 col-lg-4">
+		          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#Gráficas">
+		            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+		              <div class="portfolio-item-caption-content text-center text-white">
+		                <!--<i class="fas fa-plus fa-3x"></i>-->
+		              </div>
+		            </div>
+		            <center>
+		            	<br><img class="img-fluid" src="img/portfolio/Graficas.png" alt="" width="750" height="404">
+		            </center>
+		          </div>
+		        </div>
+		          <!-- *************************************************************** -->
+            </center>
+            <hr>
+        </div>
+        </section>
+
+              <!-- ******************************************************************************** -->
+              <!-- OBSERVAR la ventana de cleintes -->
+              <div class="portfolio-modal modal fade" id="clientes" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+		    <div class="modal-dialog modal-xl" role="document">
+		      <div class="modal-content">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">
+		            <i class="fas fa-times"></i>
+		          </span>
+		        </button>
+		        <div class="modal-body text-center">
+		          <div class="container">
+		            <div class="row justify-content-center">
+		              <div class="col-lg-8">
+		                <!-- Portfolio Modal - Title -->
+		                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Clientes</h2>
+		                <!-- Icon Divider -->
+		                <div class="divider-custom">
+		                  <div class="divider-custom-line"></div>
+		                  <div class="divider-custom-icon">
+		                    <i class="fas fa-star"></i>
+		                  </div>
+		                  <div class="divider-custom-line"></div>
+		                </div>
+		                <!-- Portfolio Modal - Image -->
+		                <!-- MOSTRAR LA IMAGEN DE GRÁFICAS, CON EL BOTÓN ABAJO DE IR -->
+		                <img class="img-fluid rounded mb-5" src="img/portfolio/Cliente.png" alt="" width="400" height="400"><br/>
+		                <a href="crud_2020 - copia/index_AgregarClientes.html"><input type="image" src="img/portfolio/Ir.png" alt="" width="50" height="50"></a>
+		                <!-- Portfolio Modal - Text -->
+		                <p class="mb-5"> </p>
+		                <button class="btn btn-primary" href="#" data-dismiss="modal">
+		                  <i class="fas fa-times fa-fw"></i>
+		                  Cerrar ventana
+		                </button>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+              <!-- ******************************************************************************** -->
+
+<!-- ################################################################################# -->
+ 		<!-- PARA HACER LOS PEDIDOS -->
+		<div class="portfolio-modal modal fade" id="Pedido" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+		    <div class="modal-dialog modal-xl" role="document">
+		      <div class="modal-content">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">
+		            <i class="fas fa-times"></i>
+		          </span>
+		        </button>
+		        <div class="modal-body text-center">
+		          <div class="container">
+		            <div class="row justify-content-center">
+		              <div class="col-lg-8">
+		                <!-- Ventana de pedido 1 -->
+		                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ventana de Pedidos</h2>
+		                <!-- Icon Divider -->
+		                <div class="divider-custom">
+		                  <div class="divider-custom-line"></div>
+		                  <div class="divider-custom-icon">
+		                    <i class="fas fa-star"></i>
+		                  </div>
+		                  <div class="divider-custom-line"></div>
+		                </div>
+		                <!-- SOLICITAR DATOS DE PEDIDOS -->
+		                   <div class="modal-header">
+		                <h5 class="modal-title" id="exampleModalLabel"></h5>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		                <form id="formPersonas">    
+		            <div class="modal-body">
+		                <div class="form-group">
+		                <label for="nombre" class="col-form-label">Nombre:</label>
+		                <input type="text" class="form-control" id="nombre">
+		                </div>
+		                <div class="form-group">
+		                <label for="pais" class="col-form-label">Pedido:</label>
+		                <input type="text" class="form-control" id="pedido">
+		                </div>
+		                <div class="form-group">
+		                <label for="pais" class="col-form-label">Ingredientes:</label>
+		                <input type="text" class="form-control" id="ingredientes">
+		                </div> 
+		                <div class="form-group">
+		                <label for="edad" class="col-form-label">Cantidad del Pedido:</label>
+		                <input type="number" class="form-control" id="cantidad">
+		                </div>
+		                <div class="form-group">
+		                <label for="pais" class="col-form-label">Bebida:</label>
+		                <input type="text" class="form-control" id="bebida">
+		                </div>
+		                <div class="form-group">
+		                <label for="edad" class="col-form-label">Cantidad de bebidas:</label>
+		                <input type="number" class="form-control" id="cantidadB">
+		                </div>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+		                <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
+		            </div>
+		        </form>  
+		                <!-- Portfolio Modal - Text -->
+		                <p class="mb-5">"Muchas Gracias Por su Compra".</p>
+		                <button class="btn btn-primary" href="#" data-dismiss="modal">
+		                  <i class="fas fa-times fa-fw"></i>
+		                  Cerrar Ventana
+		                </button>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+
+
+
+
+		  <!-- OBSERVAR LA VENTANA DE GRÁFICAS -->
+		  <div class="portfolio-modal modal fade" id="Gráficas" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+		    <div class="modal-dialog modal-xl" role="document">
+		      <div class="modal-content">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">
+		            <i class="fas fa-times"></i>
+		          </span>
+		        </button>
+		        <div class="modal-body text-center">
+		          <div class="container">
+		            <div class="row justify-content-center">
+		              <div class="col-lg-8">
+		                <!-- Portfolio Modal - Title -->
+		                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Gráficas</h2>
+		                <!-- Icon Divider -->
+		                <div class="divider-custom">
+		                  <div class="divider-custom-line"></div>
+		                  <div class="divider-custom-icon">
+		                    <i class="fas fa-star"></i>
+		                  </div>
+		                  <div class="divider-custom-line"></div>
+		                </div>
+		                <!-- Portfolio Modal - Image -->
+		                <!-- MOSTRAR LA IMAGEN DE GRÁFICAS, CON EL BOTÓN ABAJO DE IR -->
+		                <img class="img-fluid rounded mb-5" src="img/portfolio/Grafica.png" alt=""><br/>
+		                <a href="GraficaNegocio.html"><input type="image" src="img/portfolio/Ir.png" width="50" height="50"></a>
+		                <!-- Portfolio Modal - Text -->
+		                <p class="mb-5"> </p>
+		                <button class="btn btn-primary" href="#" data-dismiss="modal">
+		                  <i class="fas fa-times fa-fw"></i>
+		                  Cerrar ventana
+		                </button>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+<!-- ################################################################################# -->
+
+        <!-- Bootstrap JavaScript central -->
+          <script src="vendor/jquery/jquery.min.js"></script>
+          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+          <!-- Complemento JavaScript-->
+          <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+          <!-- Scripts personalizados para esta plantilla -->
+          <script src="js/freelancer.min.js"></script>
+    </body>
+</html>
