@@ -20,7 +20,7 @@
 
 		//3,4 Validar respuesta
 
-		if($username == 'dano' && $password == '1234' ){
+		if($username == 'dano' && $password == '1234'){
 			session_start();
 			$_SESSION['usuario'] = $username;
 			header('location: ../View/Landing/index.php');

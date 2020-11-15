@@ -1,3 +1,14 @@
+<!--/*************************************************************************
+****************************************************************************** 
+# Program Name: Somos.php
+# Authors: Gabriel Carcedo Rodríguez
+# Description: Página para visualizar la misión y propósito
+               de la empresa, así como a qué se dedica
+
+#Fecha: 01 de Abril de 2020
+******************************************************************************
+*****************************************************************************/-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

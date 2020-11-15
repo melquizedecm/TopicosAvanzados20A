@@ -63,13 +63,23 @@ $datos[5]=$mensaje;
 return $datos;
 }
 function delete(){
+	$int=0;
+	if($int==0)
+	{
 $Users=new Users();
 $respuesta=$Users->delete($_REQUEST[md5('delete')]);
 if (!$respuesta){
 $mensaje="Error al eliminar el Registro";
+echo "<script type='text/javascript'>alert('$mensaje');</script>";
 }
 else{
 $mensaje="Registro Eliminado Exitosamente";
+echo "<script type='text/javascript'>alert('$mensaje');</script>";
+}
+}
+else{
+	$mensaje="USTED NO ESTÁ AUTORIZADO BORRAR REGISTROS";
+	echo "<script type='text/javascript'>alert('$mensaje');</script>";
 }
 return $mensaje;
 }

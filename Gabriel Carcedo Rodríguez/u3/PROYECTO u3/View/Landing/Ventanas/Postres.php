@@ -1,3 +1,14 @@
+<!--/*************************************************************************
+****************************************************************************** 
+# Program Name: Postres.php
+# Authors: Gabriel Carcedo Rodríguez
+# Description: Página para visualizar los postres con los que
+               cuenta la empresa
+
+#Fecha: 01 de Abril de 2020
+******************************************************************************
+*****************************************************************************/-->
+
 <?php
 require_once("../../../Lib/verificar_sesion.php");
 ?>

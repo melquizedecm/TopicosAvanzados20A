@@ -1,4 +1,6 @@
 <?PHP
+
+
 function conectar(){
 	$server="localhost";
 	$user="root";

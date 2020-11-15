@@ -1,3 +1,14 @@
+<!--/*************************************************************************
+****************************************************************************** 
+# Program Name: tabla.php
+# Authors: Gabriel Carcedo Rodríguez
+# Description: Apartado para cceder a funciones
+               como Pedidos o Correo
+
+#Fecha: 20 de Marzo de 2020
+******************************************************************************
+*****************************************************************************/-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,6 +28,11 @@
         background: #F5F7FA;
 		font-family: 'Open Sans', sans-serif;
 	}
+  /*
+  DATOS DE LOS OBJETOS DE LA VENTANA
+  (CONFIGURACIÓN)
+  */
+
 	.table-wrapper {
 		width: 700px;
 		margin: 30px auto;
@@ -96,6 +112,7 @@
 		display: none;
 	}
 </style>
+<!--ACCIONES PARA ACCEDER A LAS FUNCIONES-->
 <script type="text/javascript">
 $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();

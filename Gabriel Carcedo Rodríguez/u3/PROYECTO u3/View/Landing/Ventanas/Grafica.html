@@ -1,3 +1,13 @@
+<!--/*************************************************************************
+****************************************************************************** 
+# Program Name: Grafica.html
+# Authors: Gabriel Carcedo Rodríguez
+# Description: Gráfica de las ventas
+
+#Fecha: 20 de Marzo de 2020
+******************************************************************************
+*****************************************************************************/-->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,11 +19,13 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	title: {
 		text: "Ventas anuales"
 	},
+	//Gráfica de Pastel
 	data: [{
 		type: "pie",
 		startAngle: 440,
 		yValueFormatString: "##0.00\"%\"",
 		indexLabel: "{label} {y}",
+		//Datos de la Gráfica
 		dataPoints: [
 			{y: 8.33, label: "Enero"},
 			{y: 8.33, label: "Febrero"},
@@ -36,6 +48,7 @@ chart.render();
 </script>
 </head>
 <body>
+	<!--Llamada a la librería-->
 <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
 <script src="../../../Lib/canvasjs.min.js"></script>
 </body>
