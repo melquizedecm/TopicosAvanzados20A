@@ -112,19 +112,25 @@
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_edit"  
-					value="<?php echo $datos[1] ?>" placeholder="Nombre Completo" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Nombre_edit"  
+					value="<?php echo $datos[1] ?>" placeholder="Nombre" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="number_phone" value="<?php echo $datos[2] ?>" placeholder="Número Telefónico" required="required">
+        	<input type="phone" class="form-control" name="Ap_Paterno" value="<?php echo $datos[2] ?>" placeholder="Ap_Paterno" required="required">
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="direccion" value="<?php echo $datos[3] ?>" placeholder="Dirección" required="required">
+        	<input type="text" class="form-control" name="Ap_Materno" value="<?php echo $datos[3] ?>" placeholder="Ap_Materno" required="required">
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="frecuencia" value="<?php echo $datos[4] ?>" placeholder="Frecuencia" required="required">
+        	<input type="text" class="form-control" name="Telefono" value="<?php echo $datos[4] ?>" placeholder="Teléfono" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="Id_Direccion" value="<?php echo $datos[5] ?>" placeholder="Id_Dirección" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="Id_Frecuencia" value="<?php echo $datos[6] ?>" placeholder="Id_Frecuencia" required="required">
         </div>
 		
 		<div class="form-group">

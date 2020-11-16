@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>EDITAR REGISTROS DE PROVEEDORES</title>
+<title>EDITAR REGISTROS DE PEDIDOS</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -105,23 +105,26 @@
 <div class="signup-form">
     <form action="" method="post">
 		<h2>Editar</h2>
-		<p class="hint-text">Edita y Actualiza tus Proveedores.</p>
+		<p class="hint-text">Edita y Actualiza tus Pedidos.</p>
 		
 		<!--<p class="hint-text"><?php if(isset($datos[3])) {echo $datos[3]; } ?></p>-->
 		<input type="hidden" name="id_provedor" value="<?php echo $datos[0]?>">
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_edit"  
-					value="<?php echo $datos[1] ?>" placeholder="Nombre del Proveedor" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Producto_edit"  
+					value="<?php echo $datos[1] ?>" placeholder="Id_Producto" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="number_phone" value="<?php echo $datos[2] ?>" placeholder="Número Telefónico" required="required">
+        	<input type="phone" class="form-control" name="Id_Ingrediente" value="<?php echo $datos[2] ?>" placeholder="Id_Ingrediente" required="required">
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="direccion" value="<?php echo $datos[3] ?>" placeholder="Dirección" required="required">
+        	<input type="phone" class="form-control" name="Id_Vendedor" value="<?php echo $datos[3] ?>" placeholder="Id_Vendedor" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="phone" class="form-control" name="Id_Precio" value="<?php echo $datos[4] ?>" placeholder="Id_Precio" required="required">
         </div>
 		
 		<div class="form-group">

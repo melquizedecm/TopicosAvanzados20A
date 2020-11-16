@@ -12,7 +12,7 @@
 
 <?php  
 
-<?php
+/*<?php
 
 	class BaseDatos extends SQLite3
 	{
@@ -34,16 +34,18 @@
 	}
 
 
-?>
+?>*/
 
-/*//configurar variables
+//configurar variables
 DBserver = "localhost";
 DBuser = "";
 DBpass = "";
-DBdatos = "user";
+DBdatos = "ale_marentes";
 
 $link = mysqli_connect(DBserver,DBuser,DBpass,DBdatos);
 
-echo $link;*/
+echo $link;
+
+//mysql_close($link);
 
 ?>

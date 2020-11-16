@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>REGISTRAR NUEVOS PROVEEDORES</title>
+<title>REGISTRAR NUEVOS PEDIDOS</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -105,28 +105,31 @@
 <div class="signup-form">
     <form action="" method="post">
 		<h2>Registrar</h2>
-		<p class="hint-text">Añade nuevos proveedores en pocos segundos.</p>
+		<p class="hint-text">Añade nuevos pedidos en pocos segundos.</p>
 		
 		<p class="hint-text"><?php if(isset($mensaje)) {echo $mensaje; } ?></p>
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_create" placeholder="Nombre del Proveedor" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Producto_create" placeholder="Id_Producto" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="number_phone" placeholder="Número Telefónico" required="required">
+        	<input type="phone" class="form-control" name="Id_Ingrediente" placeholder="Id_Ingrediente" required="required">
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="direccion" placeholder="Dirección" required="required">
+        	<input type="phone" class="form-control" name="Id_Vendedor" placeholder="Id_Vendedor" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="phone" class="form-control" name="Id_Precio" placeholder="Id_Precio" required="required">
         </div>
 		
 		<div class="form-group">
             <button type="submit" class="btn btn-success btn-lg btn-block">Añadir</button>
         </div>
     </form>
-	<div class="text-center">Presiona aquí para ir a -><a href="index.php">PROVEEDORES</a></div>
+	<div class="text-center">Presiona aquí para ir a -><a href="index.php">PEDIDOS</a></div>
 </div>
 </body>
 </html> 

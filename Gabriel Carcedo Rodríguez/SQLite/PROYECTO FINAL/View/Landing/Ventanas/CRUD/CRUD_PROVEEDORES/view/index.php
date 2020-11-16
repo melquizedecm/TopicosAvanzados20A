@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TABLA CRUD DE LOS PROVEEDORES</title>
+<title>TABLA CRUD DE LOS PEDIDOS</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -183,10 +183,10 @@ $(document).ready(function(){
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-5">
-						<h2>Gestión de <b>Proveedores</b></h2>
+						<h2>Gestión de <b>Pedidos</b></h2>
 					</div>
 					<div class="col-sm-7">
-						<a href="create.php" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Añadir Nuevo Proveedor</span></a>
+						<a href="create.php" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Añadir Nuevo Pedido</span></a>
 						<!--<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>-->
 					</div>
                 </div>
@@ -195,9 +195,10 @@ $(document).ready(function(){
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nombre</th>						
-						<th>Teléfono</th>
-						<th>Dirección</th>
+                        <th>Id_Producto</th>						
+						<th>Id_Ingrediente</th>
+						<th>Id_Vendedor</th>
+                        <th>Id_Precio</th>
 						<th>Acciones</th>
                     </tr>
                 </thead>
@@ -209,6 +210,7 @@ $(document).ready(function(){
                         <td><?php echo $fila[1]; ?></td>
                         <td><?php echo $fila[2]; ?></td>                        
                         <td><?php echo $fila[3]; ?></td>
+                        <td><?php echo $fila[4]; ?></td>
                         <td>
                             <?php $edit=md5('id'); ?>
                             <?php $delete=md5('delete'); ?>

@@ -111,18 +111,24 @@
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_create" placeholder="Nombre Completo" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Nombre_create" placeholder="Nombre" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="number_phone" placeholder="Número Telefónico" required="required">
+        	<input type="phone" class="form-control" name="Ap_Paterno" placeholder="Ap_Paterno" required="required">
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="direccion" placeholder="Dirección" required="required">
+        	<input type="text" class="form-control" name="Ap_Materno" placeholder="Ap_Materno" required="required">
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="frecuencia" placeholder="Frecuencia" required="required">
+        	<input type="text" class="form-control" name="Telefono" placeholder="Teléfono" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="Id_Direccion" placeholder="Id_Dirección" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="Id_Frecuencia" placeholder="Id_Frecuencia" required="required">
         </div>
 		
 		<div class="form-group">

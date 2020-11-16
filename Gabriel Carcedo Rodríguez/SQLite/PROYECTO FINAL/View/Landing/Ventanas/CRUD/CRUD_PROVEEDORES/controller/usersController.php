@@ -21,9 +21,10 @@ $tabla=read();
 function create(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['full_name_create'];
-$datos[1]=$_REQUEST['number_phone'];
-$datos[2]=$_REQUEST['direccion'];
+$datos[0]=$_REQUEST['Id_Producto_create'];
+$datos[1]=$_REQUEST['Id_Ingrediente'];
+$datos[2]=$_REQUEST['Id_Vendedor'];
+$datos[3]=$_REQUEST['Id_Precio'];
 $respuesta= $Users->create($datos);
 if (!$respuesta){
 $mensaje="Error al guardar";
@@ -46,10 +47,11 @@ return $tabla;
 function update(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['id_provedor'];
-$datos[1]=$_REQUEST['full_name_edit'];
-$datos[2]=$_REQUEST['number_phone'];
-$datos[3]=$_REQUEST['direccion'];
+$datos[0]=$_REQUEST['Id_Pedido'];
+$datos[1]=$_REQUEST['Id_Producto_edit'];
+$datos[2]=$_REQUEST['Id_Ingrediente'];
+$datos[3]=$_REQUEST['Id_Vendedor'];
+$datos[4]=$_REQUEST['Id_Precio'];
 $respuesta= $Users->update($datos);
 if (!$respuesta){
 $mensaje="Error al actualizar";
@@ -57,7 +59,7 @@ $mensaje="Error al actualizar";
 else{
 $mensaje="Registro Actualizado";
 }
-$datos[4]=$mensaje;
+$datos[5]=$mensaje;
 return $datos;
 }
 function delete(){

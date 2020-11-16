@@ -2,10 +2,10 @@
 require_once("../core/config.php");
 require_once("../model/Users.php");
 
-if (isset($_REQUEST['full_name_create'])){
+if (isset($_REQUEST['Nombre_create'])){
 $mensaje=create();
 }
-elseif (isset($_REQUEST['full_name_edit'])){
+elseif (isset($_REQUEST['Nombre_edit'])){
 $datos=update();
 }
 elseif(isset($_REQUEST[md5('id')])){
@@ -21,16 +21,18 @@ $tabla=read();
 function create(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['full_name_create'];
-$datos[1]=$_REQUEST['number_phone'];
-$datos[2]=$_REQUEST['direccion'];
-$datos[3]=$_REQUEST['frecuencia'];
+$datos[0]=$_REQUEST['Nombre_create'];
+$datos[1]=$_REQUEST['Ap_Paterno'];
+$datos[2]=$_REQUEST['Ap_Materno'];
+$datos[3]=$_REQUEST['Telefono'];
+$datos[4]=$_REQUEST['Id_Direccion'];
+$datos[5]=$_REQUEST['Id_Frecuencia'];
 $respuesta= $Users->create($datos);
 if (!$respuesta){
-$mensaje="Error al guardar";
+echo "Error al guardar";
 }
 else{
-$mensaje="Registro Guardado";
+echo "Registro Guardado";
 }
 return $mensaje;
 }
@@ -47,19 +49,21 @@ return $tabla;
 function update(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['id_clientes'];
-$datos[1]=$_REQUEST['full_name_edit'];
-$datos[2]=$_REQUEST['number_phone'];
-$datos[3]=$_REQUEST['direccion'];
-$datos[4]=$_REQUEST['frecuencia'];
+$datos[0]=$_REQUEST['Id_Clientes'];
+$datos[1]=$_REQUEST['Nombre_edit'];
+$datos[2]=$_REQUEST['Ap_Paterno'];
+$datos[3]=$_REQUEST['Ap_Materno'];
+$datos[4]=$_REQUEST['Telefono'];
+$datos[5]=$_REQUEST['Id_Direccion'];
+$datos[6]=$_REQUEST['Id_Frecuencia'];
 $respuesta= $Users->update($datos);
 if (!$respuesta){
-$mensaje="Error al actualizar";
+echo "Error al actualizar";
 }
 else{
-$mensaje="Registro Actualizado";
+echo "Registro Actualizado";
 }
-$datos[5]=$mensaje;
+$datos[7]=$mensaje;
 return $datos;
 }
 function delete(){
@@ -70,11 +74,11 @@ $Users=new Users();
 $respuesta=$Users->delete($_REQUEST[md5('delete')]);
 if (!$respuesta){
 $mensaje="Error al eliminar el Registro";
-echo "<script type='text/javascript'>alert('$mensaje');</script>";
+//echo "<script type='text/javascript'>alert('$mensaje');</script>";
 }
 else{
 $mensaje="Registro Eliminado Exitosamente";
-echo "<script type='text/javascript'>alert('$mensaje');</script>";
+//echo "<script type='text/javascript'>alert('$mensaje');</script>";
 }
 }
 else{
