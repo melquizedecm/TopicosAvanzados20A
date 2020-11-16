@@ -19,5 +19,4 @@
 		echo "<p>La Base de Datos NO se abrió";
 	}
 
-
 ?>
