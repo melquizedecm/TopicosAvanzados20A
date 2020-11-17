@@ -2,10 +2,10 @@
 require_once("../core/config.php");
 require_once("../model/Users.php");
 
-if (isset($_REQUEST['Nombre_create'])){
+if (isset($_REQUEST['Id_Vendedor_create'])){
 $mensaje=create();
 }
-elseif (isset($_REQUEST['Nombre_edit'])){
+elseif (isset($_REQUEST['Id_Vendedor_edit'])){
 $datos=update();
 }
 elseif(isset($_REQUEST[md5('id')])){
@@ -21,9 +21,10 @@ $tabla=read();
 function create(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['Nombre_create'];
-$datos[1]=$_REQUEST['Ap_Paterno'];
-$datos[2]=$_REQUEST['Ap_Materno'];
+$datos[0]=$_REQUEST['Id_Vendedor_create'];
+$datos[1]=$_REQUEST['Nombre'];
+$datos[2]=$_REQUEST['Ap_Paterno'];
+$datos[3]=$_REQUEST['Ap_Materno'];
 $respuesta= $Users->create($datos);
 if (!$respuesta){
 $mensaje="Error al guardar";

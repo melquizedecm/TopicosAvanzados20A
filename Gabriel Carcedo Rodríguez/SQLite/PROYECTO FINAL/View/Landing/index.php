@@ -69,8 +69,8 @@ Queremos ofrecerte productos de la mejor calidad y diseño, es por eso que estam
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="Ventanas/CRUD/CRUD_EMPLEADOS/view/index.php">VENDEDORES</a>
-          <a class="dropdown-item" href="Ventanas/CRUD/CRUD_CLIENTES/view/index.php">CLIENTES</a>
-          <!--<a class="dropdown-item" href="Ventanas/CRUD/CRUD_PRODUCTOS/view/index.php">Productos</a>
+          <!--<a class="dropdown-item" href="Ventanas/CRUD/CRUD_CLIENTES/view/index.php">CLIENTES</a>
+          <a class="dropdown-item" href="Ventanas/CRUD/CRUD_PRODUCTOS/view/index.php">Productos</a>
           <a class="dropdown-item" href="Ventanas/CRUD/CRUD_MATERIA_PRIMA/view/index.php">Material</a>
           <a class="dropdown-item" href="Ventanas/CRUD/CRUD_MERMA/view/index.php">Merma</a>-->          
           <a class="dropdown-item" href="Ventanas/CRUD/CRUD_PROVEEDORES/view/index.php">PEDIDOS</a>         

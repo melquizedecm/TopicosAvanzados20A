@@ -113,18 +113,18 @@
         <div class="form-group">
 			<div class="row">
 				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Producto_edit"  
-					value="<?php echo $datos[1] ?>" placeholder="Id_Producto" required="required"></div>
+					value="<?php echo $datos[1] ?>" placeholder="Producto" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Id_Ingrediente" value="<?php echo $datos[2] ?>" placeholder="Id_Ingrediente" required="required">
+        	<input type="phone" class="form-control" name="Id_Ingrediente" value="<?php echo $datos[2] ?>" placeholder="Ingrediente" required="required">
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Id_Vendedor" value="<?php echo $datos[3] ?>" placeholder="Id_Vendedor" required="required">
+        	<input type="phone" class="form-control" name="Id_Vendedor" value="<?php echo $datos[3] ?>" placeholder="Vendedor" required="required">
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Id_Precio" value="<?php echo $datos[4] ?>" placeholder="Id_Precio" required="required">
+        	<input type="phone" class="form-control" name="Id_Precio" value="<?php echo $datos[4] ?>" placeholder="Precio" required="required">
         </div>
 		
 		<div class="form-group">

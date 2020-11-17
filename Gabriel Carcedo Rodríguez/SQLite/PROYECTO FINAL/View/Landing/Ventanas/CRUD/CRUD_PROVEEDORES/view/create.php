@@ -111,18 +111,18 @@
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Producto_create" placeholder="Id_Producto" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Producto_create" placeholder="Producto" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Id_Ingrediente" placeholder="Id_Ingrediente" required="required">
+        	<input type="phone" class="form-control" name="Id_Ingrediente" placeholder="Ingrediente" required="required">
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Id_Vendedor" placeholder="Id_Vendedor" required="required">
+        	<input type="phone" class="form-control" name="Id_Vendedor" placeholder="Vendedor" required="required">
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Id_Precio" placeholder="Id_Precio" required="required">
+        	<input type="phone" class="form-control" name="Id_Precio" placeholder="Precio" required="required">
         </div>
 		
 		<div class="form-group">

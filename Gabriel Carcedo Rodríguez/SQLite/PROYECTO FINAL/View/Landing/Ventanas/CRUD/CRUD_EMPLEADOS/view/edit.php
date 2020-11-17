@@ -108,17 +108,20 @@
 		<p class="hint-text">Edita y Actualiza los datos de un Vendedor.</p>
 		
 		<!--<p class="hint-text"><?php if(isset($datos[3])) {echo $datos[3]; } ?></p>-->
-		<input type="hidden" name="Id_Vendedor" value="<?php echo $datos[0]?>">
+		<!--<input type="hidden" name="Id_Vendedor" value="<?php echo $datos[0]?>">-->
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="Nombre_edit"  
-					value="<?php echo $datos[1] ?>" placeholder="Nombre" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Vendedor_edit"  
+					value="<?php echo $datos[0] ?>" placeholder="Id_Vendedor" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Ap_Paterno" value="<?php echo $datos[2] ?>" placeholder="Apellido Paterno" required="required">
+        	<input type="text" class="form-control" name="Nombre" value="<?php echo $datos[1] ?>" placeholder="Nombre" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="Ap_Paterno" value="<?php echo $datos[2] ?>" placeholder="Apellido Paterno" required="required">
         </div>
         <div class="form-group">
         	<input type="text" class="form-control" name="Ap_Materno" value="<?php echo $datos[3] ?>" placeholder="Apellido MAterno" required="required">

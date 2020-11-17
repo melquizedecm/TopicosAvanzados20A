@@ -2,10 +2,10 @@
 require_once("../core/config.php");
 require_once("../model/Users.php");
 
-if (isset($_REQUEST['full_name_create'])){
+if (isset($_REQUEST['Id_Producto_create'])){
 $mensaje=create();
 }
-elseif (isset($_REQUEST['full_name_edit'])){
+elseif (isset($_REQUEST['Id_Producto_edit'])){
 $datos=update();
 }
 elseif(isset($_REQUEST[md5('id')])){

@@ -111,9 +111,12 @@
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="Nombre_create" placeholder="Nombre" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Vendedor_create" placeholder="Id_Vendedor" required="required"></div>
 
 			</div>        	
+        </div>
+        <div class="form-group">
+        	<input type="phone" class="form-control" name="Nombre" placeholder="Nombre" required="required">
         </div>
         <div class="form-group">
         	<input type="phone" class="form-control" name="Ap_Paterno" placeholder="Apellido Paterno" required="required">

@@ -10,7 +10,7 @@ class Users{
 	}
 
 	function create($datos){
-		$sql="INSERT INTO VENDEDOR (Nombre, Ap_Paterno, Ap_Materno) VALUES ('".$datos[0]."', '".$datos[1]."', '".$datos[2]."')";
+		$sql="INSERT INTO VENDEDOR (Id_Vendedor, Nombre, Ap_Paterno, Ap_Materno) VALUES ('".$datos[0]."', '".$datos[1]."', '".$datos[2]."', '".$datos[3]."')";
 		$respuesta=$this->link->query($sql);
 		if (!$respuesta) {
 			echo $this->link->error;
@@ -33,7 +33,7 @@ class Users{
 
 
 	function update($datos){
-		$sql="UPDATE VENDEDOR SET Nombre='".$datos[1]."', Ap_Paterno='".$datos[2]."', Ap_Materno='".$datos[3]."' WHERE Id_Vendedor='".$datos[0]."' ";
+		$sql="UPDATE VENDEDOR SET Id_Vendedor='".$datos[0]."', Nombre='".$datos[1]."', Ap_Paterno='".$datos[2]."', Ap_Materno='".$datos[3]."' WHERE Id_Vendedor='".$datos[0]."' ";
 		$respuesta=$this->link->query($sql);
 		if (!$respuesta) {
 			echo $this->link->error;

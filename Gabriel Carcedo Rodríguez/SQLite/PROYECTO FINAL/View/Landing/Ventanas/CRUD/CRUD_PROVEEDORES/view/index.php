@@ -195,10 +195,10 @@ $(document).ready(function(){
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Id_Producto</th>						
-						<th>Id_Ingrediente</th>
-						<th>Id_Vendedor</th>
-                        <th>Id_Precio</th>
+                        <th>Producto</th>						
+						<th>Ingrediente</th>
+						<th>Vendedor</th>
+                        <th>Precio</th>
 						<th>Acciones</th>
                     </tr>
                 </thead>
