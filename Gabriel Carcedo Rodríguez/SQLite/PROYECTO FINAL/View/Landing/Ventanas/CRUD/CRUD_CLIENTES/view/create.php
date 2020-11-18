@@ -111,12 +111,15 @@
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="Nombre_create" placeholder="Nombre" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Id_Clientes_create" placeholder="Id_Clientes" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="Ap_Paterno" placeholder="Ap_Paterno" required="required">
+        	<input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="Ap_Paterno" placeholder="Ap_Paterno" required="required">
         </div>
         <div class="form-group">
         	<input type="text" class="form-control" name="Ap_Materno" placeholder="Ap_Materno" required="required">

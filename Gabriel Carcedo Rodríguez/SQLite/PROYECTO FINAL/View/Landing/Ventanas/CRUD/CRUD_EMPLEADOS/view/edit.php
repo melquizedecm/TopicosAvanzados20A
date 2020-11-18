@@ -132,7 +132,7 @@
             <button type="submit" class="btn btn-success btn-lg btn-block">Actualizar</button>
         </div>
     </form>
-	<div class="text-center">Presiona aquí para ir a -><a href="index.php">EMPLEADOS</a></div>
+	<div class="text-center">Presiona aquí para ir a -><a href="index.php">VENDEDORES</a></div>
 </div>
 </body>
 </html> 

@@ -25,7 +25,7 @@ class Users{
 		return $tabla;
 	}
 
-	function readId($id_empleados){
+	function readId($Id_Vendedor){
 		$sql="SELECT * FROM VENDEDOR WHERE Id_Vendedor='".$Id_Vendedor."'";
 		$tabla=$this->link->query($sql);
 		return $tabla->fetch_array(MYSQLI_BOTH);

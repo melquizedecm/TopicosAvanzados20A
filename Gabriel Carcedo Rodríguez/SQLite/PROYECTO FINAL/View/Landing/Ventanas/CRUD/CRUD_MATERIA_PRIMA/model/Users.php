@@ -10,7 +10,7 @@ class Users{
 	}
 
 	function create($datos){
-		$sql="INSERT INTO material (full_name, number_phone) VALUES ('".$datos[0]."', '".$datos[1]."')";
+		$sql="INSERT INTO NOTA_ENTREGA (Fecha_Hora, Id_Pedido, Id_Clientes) VALUES ('".$datos[0]."', '".$datos[1]."', '".$datos[2]."')";
 		$respuesta=$this->link->query($sql);
 		if (!$respuesta) {
 			echo $this->link->error;
@@ -20,20 +20,20 @@ class Users{
 	}
 
 	function read(){
-		$sql="SELECT * FROM material";
+		$sql="SELECT * FROM NOTA_ENTREGA";
 		$tabla=$this->link->query($sql);
 		return $tabla;
 	}
 
-	function readId($id_material){
-		$sql="SELECT * FROM material WHERE id_material='".$id_material."'";
+	function readId($Id_Nota){
+		$sql="SELECT * FROM NOTA_ENTREGA WHERE Id_Nota='".$Id_Nota."'";
 		$tabla=$this->link->query($sql);
 		return $tabla->fetch_array(MYSQLI_BOTH);
 	}
 
 
 	function update($datos){
-		$sql="UPDATE material SET full_name='".$datos[1]."', number_phone='".$datos[2]."' WHERE id_material='".$datos[0]."' ";
+		$sql="UPDATE NOTA_ENTREGA SET Fecha_Hora='".$datos[1]."', Id_Pedido='".$datos[2]."', Id_Clientes='".$datos[3]."' WHERE Id_Nota='".$datos[0]."' ";
 		$respuesta=$this->link->query($sql);
 		if (!$respuesta) {
 			echo $this->link->error;
@@ -43,7 +43,7 @@ class Users{
 	}
 
 	function delete($id){
-		$sql="DELETE FROM material WHERE id_material='".$id."'";
+		$sql="DELETE FROM NOTA_ENTREGA WHERE Id_Nota='".$id."'";
 		$respuesta=$this->link->query($sql);
 		if (!$respuesta) {
 			echo $this->link->error;

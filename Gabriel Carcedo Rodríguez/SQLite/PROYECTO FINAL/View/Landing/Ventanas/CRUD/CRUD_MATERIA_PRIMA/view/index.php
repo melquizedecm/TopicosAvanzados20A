@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TABLA CRUD DE MATERIA PRIMA</title>
+<title>TABLA CRUD DE LAS NOTAS DE ENTREGA</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -183,10 +183,10 @@ $(document).ready(function(){
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-5">
-						<h2>Gestión de <b>Materias Primas</b></h2>
+						<h2>Gestión de <b>Notas de Entrega</b></h2>
 					</div>
 					<div class="col-sm-7">
-						<a href="create.php" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Añadir Nuevo Material</span></a>
+						<a href="create.php" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Añadir Nueva Nota</span></a>
 						<!--<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>-->
 					</div>
                 </div>
@@ -195,9 +195,9 @@ $(document).ready(function(){
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Materia Prima</th>						
-						<th>Cantidad (Kg)</th>
-						<th>Fecha</th>
+                        <th>Fecha y Hora</th>						
+						<th>Pedido</th>
+						<th>Cliente</th>
 						<th>Acciones</th>
                     </tr>
                 </thead>
@@ -223,7 +223,7 @@ $(document).ready(function(){
             </table>
             <div class="row">
                 <div class="col-sm-5">
-                    <h2><b>Ale Marentes</b></h2>
+                    <h2><b><a href="../../../../index.php">Ale Marentes</a></b></h2>
                 </div>
             </div>
         </div>

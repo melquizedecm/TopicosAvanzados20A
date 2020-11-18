@@ -33,7 +33,7 @@ class Users{
 		return $tabla;
 	}
 
-	function readId($id_provedor){
+	function readId($Id_Pedido){
 		$sql="SELECT * FROM PEDIDOS WHERE Id_Pedido='".$Id_Pedido."'";
 		$tabla=$this->link->query($sql);
 		return $tabla->fetch_array(MYSQLI_BOTH);

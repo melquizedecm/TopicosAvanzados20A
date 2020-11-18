@@ -2,10 +2,10 @@
 require_once("../core/config.php");
 require_once("../model/Users.php");
 
-if (isset($_REQUEST['full_name_create'])){
+if (isset($_REQUEST['Fecha_Hora_create'])){
 $mensaje=create();
 }
-elseif (isset($_REQUEST['full_name_edit'])){
+elseif (isset($_REQUEST['Fecha_Hora_edit'])){
 $datos=update();
 }
 elseif(isset($_REQUEST[md5('id')])){
@@ -21,8 +21,9 @@ $tabla=read();
 function create(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['full_name_create'];
-$datos[1]=$_REQUEST['number_phone'];
+$datos[0]=$_REQUEST['Fecha_Hora_create'];
+$datos[1]=$_REQUEST['Id_Pedido'];
+$datos[2]=$_REQUEST['Id_Clientes'];
 $respuesta= $Users->create($datos);
 if (!$respuesta){
 $mensaje="Error al guardar";
@@ -45,9 +46,10 @@ return $tabla;
 function update(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['id_material'];
-$datos[1]=$_REQUEST['full_name_edit'];
-$datos[2]=$_REQUEST['number_phone'];
+$datos[0]=$_REQUEST['Id_Nota'];
+$datos[1]=$_REQUEST['Fecha_Hora_edit'];
+$datos[2]=$_REQUEST['Id_Pedido'];
+$datos[3]=$_REQUEST['Id_Clientes'];
 $respuesta= $Users->update($datos);
 if (!$respuesta){
 $mensaje="Error al actualizar";
@@ -55,7 +57,7 @@ $mensaje="Error al actualizar";
 else{
 $mensaje="Registro Actualizado";
 }
-$datos[3]=$mensaje;
+$datos[4]=$mensaje;
 return $datos;
 }
 function delete(){

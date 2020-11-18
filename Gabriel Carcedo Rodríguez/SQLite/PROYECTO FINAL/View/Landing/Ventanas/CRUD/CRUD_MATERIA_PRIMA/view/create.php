@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>REGISTRAR NUEVOS MATERIALES</title>
+<title>REGISTRAR NUEVAS NOTAS DE ENTREGAS</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -105,25 +105,28 @@
 <div class="signup-form">
     <form action="" method="post">
 		<h2>Registrar</h2>
-		<p class="hint-text">Añade nuevos productos en pocos segundos.</p>
+		<p class="hint-text">Añade las nuevas Notas de Entrega.</p>
 		
 		<p class="hint-text"><?php if(isset($mensaje)) {echo $mensaje; } ?></p>
 		
         <div class="form-group">
 			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" name="full_name_create" placeholder="Nombre del Material" required="required"></div>
+				<div class="col-xs-12"><input type="text" class="form-control" name="Fecha_Hora_create" placeholder="Fecha y Hora" required="required"></div>
 
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="phone" class="form-control" name="number_phone" placeholder="Cantidad (Kg)" required="required">
+        	<input type="text" class="form-control" name="Id_Pedido" placeholder="Pedido" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="Id_Clientes" placeholder="Cliente" required="required">
         </div>
 		
 		<div class="form-group">
             <button type="submit" class="btn btn-success btn-lg btn-block">Añadir</button>
         </div>
     </form>
-	<div class="text-center">Presiona aquí para ir a -><a href="index.php">MATERIALES</a></div>
+	<div class="text-center">Presiona aquí para ir a -><a href="index.php">NOTAS DE ENTREGA</a></div>
 </div>
 </body>
 </html> 

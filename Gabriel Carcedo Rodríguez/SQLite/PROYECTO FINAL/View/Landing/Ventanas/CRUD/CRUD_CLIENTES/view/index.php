@@ -227,7 +227,7 @@ $(document).ready(function(){
             </table>
 			<div class="row">
                 <div class="col-sm-5">
-                    <h2><b>Ale Marentes</b></h2>
+                    <h2><b><a href="../../../../index.php">Ale Marentes</a></b></h2>
                 </div>
             </div>
         </div>

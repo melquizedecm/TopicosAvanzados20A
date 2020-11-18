@@ -2,10 +2,10 @@
 require_once("../core/config.php");
 require_once("../model/Users.php");
 
-if (isset($_REQUEST['Nombre_create'])){
+if (isset($_REQUEST['Id_Clientes_create'])){
 $mensaje=create();
 }
-elseif (isset($_REQUEST['Nombre_edit'])){
+elseif (isset($_REQUEST['Id_Clientes_edit'])){
 $datos=update();
 }
 elseif(isset($_REQUEST[md5('id')])){
@@ -21,17 +21,18 @@ $tabla=read();
 function create(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['Nombre_create'];
-$datos[1]=$_REQUEST['Ap_Paterno'];
-$datos[2]=$_REQUEST['Ap_Materno'];
-$datos[3]=$_REQUEST['Id_Direccion'];
-$datos[4]=$_REQUEST['Id_Frecuencia'];
+$datos[0]=$_REQUEST['Id_Clientes_create'];
+$datos[1]=$_REQUEST['Nombre'];
+$datos[2]=$_REQUEST['Ap_Paterno'];
+$datos[3]=$_REQUEST['Ap_Materno'];
+$datos[4]=$_REQUEST['Id_Direccion'];
+$datos[5]=$_REQUEST['Id_Frecuencia'];
 $respuesta= $Users->create($datos);
 if (!$respuesta){
-echo "Error al guardar";
+$mensaje="Error al guardar";
 }
 else{
-echo "Registro Guardado";
+$mensaje="Registro Guardado";
 }
 return $mensaje;
 }
@@ -48,18 +49,18 @@ return $tabla;
 function update(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['Id_Clientes'];
-$datos[1]=$_REQUEST['Nombre_edit'];
+$datos[0]=$_REQUEST['Id_Clientes_edit'];
+$datos[1]=$_REQUEST['Nombre'];
 $datos[2]=$_REQUEST['Ap_Paterno'];
 $datos[3]=$_REQUEST['Ap_Materno'];
 $datos[4]=$_REQUEST['Id_Direccion'];
 $datos[5]=$_REQUEST['Id_Frecuencia'];
 $respuesta= $Users->update($datos);
 if (!$respuesta){
-echo "Error al actualizar";
+$mensaje="Error al actualizar";
 }
 else{
-echo "Registro Actualizado";
+$mensaje="Registro Actualizado";
 }
 $datos[6]=$mensaje;
 return $datos;

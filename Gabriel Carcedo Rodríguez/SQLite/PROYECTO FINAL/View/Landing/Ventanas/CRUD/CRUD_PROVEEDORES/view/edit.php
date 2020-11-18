@@ -108,7 +108,7 @@
 		<p class="hint-text">Edita y Actualiza tus Pedidos.</p>
 		
 		<!--<p class="hint-text"><?php if(isset($datos[3])) {echo $datos[3]; } ?></p>-->
-		<input type="hidden" name="id_provedor" value="<?php echo $datos[0]?>">
+		<input type="hidden" name="Id_Pedido" value="<?php echo $datos[0]?>">
 		
         <div class="form-group">
 			<div class="row">
@@ -131,7 +131,7 @@
             <button type="submit" class="btn btn-success btn-lg btn-block">Actualizar</button>
         </div>
     </form>
-	<div class="text-center">Presiona aquí para ir a-><a href="index.php">PROVEEDORES</a></div>
+	<div class="text-center">Presiona aquí para ir a-><a href="index.php">PEDIDOS</a></div>
 </div>
 </body>
 </html> 

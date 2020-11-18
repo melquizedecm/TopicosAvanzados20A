@@ -56,13 +56,13 @@ Queremos ofrecerte productos de la mejor calidad y diseño, es por eso que estam
           <a class="dropdown-item" href="Ventanas/Pasteles.php">Pasteles</a>          
         </div>
       </li>
-      <!--grafica-->
+      <!--grafica
         <li class="nav-item">
           <?php
           require_once("../../Lib/Grafica.php");
           ?>
 
-      </li>
+      </li>-->
       <li class="nav-item dropdown" >
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Administrar
@@ -70,15 +70,15 @@ Queremos ofrecerte productos de la mejor calidad y diseño, es por eso que estam
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="Ventanas/CRUD/CRUD_EMPLEADOS/view/index.php">VENDEDORES</a>
           <a class="dropdown-item" href="Ventanas/CRUD/CRUD_CLIENTES/view/index.php">CLIENTES</a>
-          <!--<a class="dropdown-item" href="Ventanas/CRUD/CRUD_PRODUCTOS/view/index.php">Productos</a>
-          <a class="dropdown-item" href="Ventanas/CRUD/CRUD_MATERIA_PRIMA/view/index.php">Material</a>
-          <a class="dropdown-item" href="Ventanas/CRUD/CRUD_MERMA/view/index.php">Merma</a>-->          
+          <!--<a class="dropdown-item" href="Ventanas/CRUD/CRUD_PRODUCTOS/view/index.php">Productos</a>-->
+          <a class="dropdown-item" href="Ventanas/CRUD/CRUD_MATERIA_PRIMA/view/index.php">NOTAS DE ENTREGA</a>
+          <!--<a class="dropdown-item" href="Ventanas/CRUD/CRUD_MERMA/view/index.php">Merma</a>-->          
           <a class="dropdown-item" href="Ventanas/CRUD/CRUD_PROVEEDORES/view/index.php">PEDIDOS</a>         
         </div>
       </li>
       <!--base de datos algun dia-->
       <li class="nav-item">
-        <a class="nav-link" href="Ventanas/pedidos.html">Pedidos</a>       
+        <!--<a class="nav-link" href="Ventanas/pedidos.html">Pedidos</a>-->       
          <li class="nav-item">
         <a class="nav-link" href="Ventanas/Correo.php">Correo</a>
     </li>
@@ -127,7 +127,7 @@ Queremos ofrecerte productos de la mejor calidad y diseño, es por eso que estam
         <a class="nav-link" href="../../Controller/Cerrar_Sesion.php">Cerrar sesión</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Login/Login.html">Registrarse</a>
+        <!--<a class="nav-link" href="Login/Login.html">Registrarse</a>-->
       </li>
       </ul>
     </span>

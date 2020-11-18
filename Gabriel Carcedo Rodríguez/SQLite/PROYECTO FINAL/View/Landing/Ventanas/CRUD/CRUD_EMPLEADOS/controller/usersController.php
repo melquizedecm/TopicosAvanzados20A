@@ -47,8 +47,8 @@ return $tabla;
 function update(){
 $Users= new Users();
 $datos=[];
-$datos[0]=$_REQUEST['Id_Vendedor'];
-$datos[1]=$_REQUEST['Nombre_edit'];
+$datos[0]=$_REQUEST['Id_Vendedor_edit'];
+$datos[1]=$_REQUEST['Nombre'];
 $datos[2]=$_REQUEST['Ap_Paterno'];
 $datos[3]=$_REQUEST['Ap_Materno'];
 $respuesta= $Users->update($datos);
@@ -58,7 +58,7 @@ $mensaje="Error al actualizar";
 else{
 $mensaje="Registro Actualizado";
 }
-$datos[6]=$mensaje;
+$datos[4]=$mensaje;
 return $datos;
 }
 function delete(){
