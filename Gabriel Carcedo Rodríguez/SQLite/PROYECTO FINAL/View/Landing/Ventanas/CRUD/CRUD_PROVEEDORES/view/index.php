@@ -212,7 +212,7 @@ $(document).ready(function(){
                         <td><?php echo $fila[3]; ?></td>
                         <td><?php echo $fila[4]; ?></td>
                         <td>
-                            <?php $edit=md5('id'); ?>
+                            <?php $edit='id'; ?>
                             <?php $delete=md5('delete'); ?>
                             <a href="edit.php?<?php echo $edit.'='.$fila[0];?>" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
                             <a href="?<?php echo $delete.'='.$fila[0];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>

@@ -24,9 +24,8 @@ $datos=[];
 $datos[0]=$_REQUEST['Nombre_create'];
 $datos[1]=$_REQUEST['Ap_Paterno'];
 $datos[2]=$_REQUEST['Ap_Materno'];
-$datos[3]=$_REQUEST['Telefono'];
-$datos[4]=$_REQUEST['Id_Direccion'];
-$datos[5]=$_REQUEST['Id_Frecuencia'];
+$datos[3]=$_REQUEST['Id_Direccion'];
+$datos[4]=$_REQUEST['Id_Frecuencia'];
 $respuesta= $Users->create($datos);
 if (!$respuesta){
 echo "Error al guardar";
@@ -53,9 +52,8 @@ $datos[0]=$_REQUEST['Id_Clientes'];
 $datos[1]=$_REQUEST['Nombre_edit'];
 $datos[2]=$_REQUEST['Ap_Paterno'];
 $datos[3]=$_REQUEST['Ap_Materno'];
-$datos[4]=$_REQUEST['Telefono'];
-$datos[5]=$_REQUEST['Id_Direccion'];
-$datos[6]=$_REQUEST['Id_Frecuencia'];
+$datos[4]=$_REQUEST['Id_Direccion'];
+$datos[5]=$_REQUEST['Id_Frecuencia'];
 $respuesta= $Users->update($datos);
 if (!$respuesta){
 echo "Error al actualizar";
@@ -63,7 +61,7 @@ echo "Error al actualizar";
 else{
 echo "Registro Actualizado";
 }
-$datos[7]=$mensaje;
+$datos[6]=$mensaje;
 return $datos;
 }
 function delete(){

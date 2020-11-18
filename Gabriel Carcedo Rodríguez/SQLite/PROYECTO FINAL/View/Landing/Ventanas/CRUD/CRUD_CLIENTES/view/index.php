@@ -198,7 +198,6 @@ $(document).ready(function(){
                         <th>Nombre</th>						
 						<th>Ap_Paterno</th>
 						<th>Ap_Materno</th>
-                        <th>Teléfono</th>
                         <th>Id_Dirección</th>
                         <th>Id_Frecuencia</th>
 						<th>Acciones</th>
@@ -214,7 +213,6 @@ $(document).ready(function(){
                         <td><?php echo $fila[3]; ?></td>
                         <td><?php echo $fila[4]; ?></td>
                         <td><?php echo $fila[5]; ?></td>
-                        <td><?php echo $fila[6]; ?></td>
                         <td>
                             <?php $edit=md5('id'); ?>
                             <?php $delete=md5('delete'); ?>

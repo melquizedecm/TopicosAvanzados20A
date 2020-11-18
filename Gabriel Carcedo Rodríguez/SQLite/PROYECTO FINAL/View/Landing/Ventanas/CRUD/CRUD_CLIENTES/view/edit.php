@@ -124,13 +124,10 @@
         	<input type="text" class="form-control" name="Ap_Materno" value="<?php echo $datos[3] ?>" placeholder="Ap_Materno" required="required">
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="Telefono" value="<?php echo $datos[4] ?>" placeholder="Teléfono" required="required">
+        	<input type="text" class="form-control" name="Id_Direccion" value="<?php echo $datos[4] ?>" placeholder="Id_Dirección" required="required">
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="Id_Direccion" value="<?php echo $datos[5] ?>" placeholder="Id_Dirección" required="required">
-        </div>
-        <div class="form-group">
-        	<input type="text" class="form-control" name="Id_Frecuencia" value="<?php echo $datos[6] ?>" placeholder="Id_Frecuencia" required="required">
+        	<input type="text" class="form-control" name="Id_Frecuencia" value="<?php echo $datos[5] ?>" placeholder="Id_Frecuencia" required="required">
         </div>
 		
 		<div class="form-group">

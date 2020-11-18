@@ -122,9 +122,6 @@
         	<input type="text" class="form-control" name="Ap_Materno" placeholder="Ap_Materno" required="required">
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="Telefono" placeholder="Teléfono" required="required">
-        </div>
-        <div class="form-group">
         	<input type="text" class="form-control" name="Id_Direccion" placeholder="Id_Dirección" required="required">
         </div>
         <div class="form-group">
