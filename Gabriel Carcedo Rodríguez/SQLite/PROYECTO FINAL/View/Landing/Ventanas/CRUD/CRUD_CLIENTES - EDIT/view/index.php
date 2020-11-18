@@ -219,24 +219,30 @@ $(document).ready(function(){
                             <a href="edit.php?<?php echo $edit.'='.$fila[0];?>" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
                             <!--La función borrar() está declarada en un script al final del body-->
                             <a href="#" onclick="if(confirm('Deseas continuar?')){borrar();}else{ alert('Operacion Cancelada');}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
+
                         </td>
                     </tr>
 <?php }?>
-                    
+                    <!--  
+                    onclick="if(confirm('Deseas continuar?')){this.form.submit();}else{ alert('Operacion Cancelada');}" 
+
+                    ?<?php echo $delete.'='.$fila[0];?>
+                    -->
+
 					
                 </tbody>
             </table>
 			<div class="row">
                 <div class="col-sm-5">
-                    <h2><b><a href="../../../../index.php">Ale Marentes</a></b></h2>
+                    <h2><b>Ale Marentes</b></h2>
                 </div>
             </div>
         </div>
-    </div>
+    </div>     
     <script type="text/javascript">
         function borrar(){
             window.location.href = "?<?php echo $delete.'='.$fila[0];?>"
         }
-    </script>     
+    </script>
 </body>
 </html>                                		                            
