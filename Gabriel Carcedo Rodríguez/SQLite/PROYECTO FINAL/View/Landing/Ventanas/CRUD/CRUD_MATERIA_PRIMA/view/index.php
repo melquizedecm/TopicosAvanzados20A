@@ -196,7 +196,7 @@ $(document).ready(function(){
                     <tr>
                         <th>ID</th>
                         <th>Fecha y Hora</th>						
-						<th>Pedido</th>
+						<th>Folio de Pedido</th>
 						<th>Cliente</th>
 						<th>Acciones</th>
                     </tr>

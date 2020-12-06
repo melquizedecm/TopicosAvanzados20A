@@ -8,6 +8,9 @@ Al llenar los datos del login este
 valida desde un archivo php llamado
 Login.php
 -->
+<SCRIPT LANGUAGE="JavaScript">
+history.forward()
+</SCRIPT>
 <!DOCTYPE html>
 <html>
 <head>

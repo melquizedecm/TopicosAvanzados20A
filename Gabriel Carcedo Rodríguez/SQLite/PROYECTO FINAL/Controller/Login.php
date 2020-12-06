@@ -26,9 +26,8 @@
 			header('location: ../View/Landing/index.php');
 			
 		}else{
-			header('location: ../View/Login/Login.php');
-			
 			//echo 'Error de usuario';
+			header('location: ../View/Login/Login.php');
 		}
 }
 /*

@@ -33,7 +33,7 @@ class Users{
 
 
 	function update($datos){
-		$sql="UPDATE NOTA_ENTREGA SET Fecha_Hora='".$datos[1]."', Id_Pedido='".$datos[2]."', Id_Clientes='".$datos[3]."' WHERE Id_Nota='".$datos[0]."' ";
+		$sql="UPDATE NOTA_ENTREGA SET Id_Pedido='".$datos[2]."', Id_Clientes='".$datos[3]."' WHERE Id_Nota='".$datos[0]."' ";
 		$respuesta=$this->link->query($sql);
 		if (!$respuesta) {
 			echo $this->link->error;

@@ -198,8 +198,8 @@ $(document).ready(function(){
                         <th>Nombre</th>						
 						<th>Ap_Paterno</th>
 						<th>Ap_Materno</th>
-                        <th>Id_Dirección</th>
-                        <th>Id_Frecuencia</th>
+                        <th>Teléfono</th>
+                        <th>Frecuencia</th>
 						<th>Acciones</th>
                     </tr>
                 </thead>

@@ -106,6 +106,7 @@
     <form action="" method="post">
 		<h2>Registrar</h2>
 		<p class="hint-text">Añade las nuevas Notas de Entrega.</p>
+		<p class="hint-text">Ingrese los datos según su ID.</p>
 		
 		<p class="hint-text"><?php if(isset($mensaje)) {echo $mensaje; } ?></p>
 		

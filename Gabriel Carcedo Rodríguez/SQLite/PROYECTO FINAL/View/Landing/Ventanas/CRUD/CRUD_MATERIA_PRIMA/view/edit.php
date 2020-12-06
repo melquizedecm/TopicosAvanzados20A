@@ -106,6 +106,7 @@
     <form action="" method="post">
 		<h2>Editar</h2>
 		<p class="hint-text">Edita y Actualiza las Notas de Entrega.</p>
+		<p class="hint-text">Ingrese los datos según su ID.</p>
 		
 		<!--<p class="hint-text"><?php if(isset($datos[3])) {echo $datos[3]; } ?></p>-->
 		<input type="hidden" name="Id_Nota" value="<?php echo $datos[0]?>">

@@ -44,8 +44,12 @@ DBdatos = "ale_marentes";
 
 $link = mysqli_connect(DBserver,DBuser,DBpass,DBdatos);
 
+if(!$link)
+{
+	die('No pudo conectarse: ' . mysql_error());
+}
+echo 'Conectado satisfactoriamente'; 
 echo $link;
-
-//mysql_close($link);
+mysql_close($link);
 
 ?>

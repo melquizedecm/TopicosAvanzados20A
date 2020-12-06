@@ -20,7 +20,7 @@ class Users{
 	}
 
 	function read(){
-		$sql="SELECT * FROM CLIENTES";
+		$sql="SELECT CLIENTES.Id_Clientes, CLIENTES.Nombre, CLIENTES.Ap_Paterno, CLIENTES.Ap_Materno, TELEFONO.Telefono, FRECUENCIA.Frecuencia FROM CLIENTES, TELEFONO, FRECUENCIA WHERE TELEFONO.Id_Telefono=CLIENTES.Id_Clientes AND FRECUENCIA.Id_Frecuencia=CLIENTES.Id_Frecuencia";
 		$tabla=$this->link->query($sql);
 		return $tabla;
 	}

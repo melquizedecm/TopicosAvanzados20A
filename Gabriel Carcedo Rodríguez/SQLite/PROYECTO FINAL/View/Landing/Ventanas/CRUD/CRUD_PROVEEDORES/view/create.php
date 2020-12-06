@@ -106,6 +106,7 @@
     <form action="" method="post">
 		<h2>Registrar</h2>
 		<p class="hint-text">Añade nuevos pedidos en pocos segundos.</p>
+		<p class="hint-text">Ingrese los datos según su ID.</p>
 		
 		<p class="hint-text"><?php if(isset($mensaje)) {echo $mensaje; } ?></p>
 		
