@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--*************************************************************************
+# Program Name: Program 11.html
+# Authors: Josue Antonio Castro Collí. 
+# Description:  Para la creación de una hoja de PDF con una imagen incluida. 
+# Date: 05/Marzo/2020
+******************************************************************************
+******************************************************************************
+-->
+<html>
+    <head>
+        <title>Programa 11</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Librerias para creacion de PDF -->
+        <!-- Utilice esta página para encontrar las librerias:
+        	https://www.npmjs.com/package/jspdf
+        -->
+        <Guión src = " https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js " 
+                integridad = " sha384-THVO / sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb / PTA7LdUHs " 
+                crossorigin = " Anónimo " > </guión >
+        <script src = " https://unpkg.com/jspdf@latest/dist/jspdf.min.js " > </script>
+        
+        <script src ="Programa 11.js"> </script>
+        
+    </head>
+    <body>
+        <div>Se descargara un PDF con una imagen</div>
+        <input 	class= "form-control col-sm-8 col-md-6 col-lg-4"
+        		type="text" 
+        		size="30" 
+        		id="texto" 
+        		name="texto" 
+        		placeholder = "Escribe algo para el PDF">
+        <div>
+        	<button type="Submit" onclick="crear();">Generar PDF</button>
+        </div>
+    </body>
+</html>

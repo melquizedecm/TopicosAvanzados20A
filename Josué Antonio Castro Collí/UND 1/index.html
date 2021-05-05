@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+****************************************
+* Source: Programa1.html 
+* Description: Funciones iniciales en .js
+* Encender un motor / Apagar un motor 
+* Date: 7/Febrero/2020
+* Author: Josue Antonio Castro Colli
+****************************************
+-->
+<html>
+    <head>
+        <title>Programa 1 </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src ="Programa 1.js"> </script>
+
+    </head>
+    	<div>
+    			<!--Al escribir sale "Hola Mundo" -->
+    			<input type="text" onkeyup="mensaje();">
+    			<!-- Sale mensaje de "Precionaste.. " al escribir -->
+    			<input type="text" onkeydown="alert('Precionaste...');" onkeyup="mensaje();">
+    			<!-- Hacer click para salir "Hola Mundo" -->
+
+    			<button ondblclick ="Encender();"> Enciende el motor </button>
+    			<button ondblclick ="Apagar();"> Apaga el motor </button>
+    	</div>
+        <div id="motor"> </div>
+    </body>
+</html>

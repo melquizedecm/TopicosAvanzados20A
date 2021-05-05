@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+******************************************************************************
+# Program Name: Program 15.html
+# Authors: Josue Antonio Castro Collí. 
+# Description:  Enviar un mensajes de WhatsApp con JavaScript. 
+# Date: 06/Marzo/2020
+#
+******************************************************************************
+*****************************************************************************
+-->
+<html>
+    <head>
+        <link href="estilos.css" rel="stylesheet" type="text/css">
+        <title>Programa 15</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src ="Programa 15.js"> </script>
+    </head>
+    <body>
+    	<div class="group">
+             <center>
+                 <h1><em>Enviar mensaje de WhatsApp</em></h1>
+             </center>
+            <!-- 
+            *    Esta parte es para poner el número del usuario y el mensaje que quieres enviar 
+            *    “_blank”, que quiere decir la página del enlace se abre en una nueva pestaña/ventana, 
+                y “self”, que la abre en la pestaña/ventana del documento actual. 
+            
+            * <a target=”_blank” href="https://api.whatsapp.com/send?phone=529993815121&text=Prueba hola">Mensaje</a> 
+            -->
+            <center>
+                <!-- Solicitar el número telefonico-->
+                    <label>Número Telefonico</label>
+                    <input class= "form-control col-sm-8 col-md-6 col-lg-4"
+                            type="number" min="1" pattern="^[0-9]+"
+                            size="10" 
+                            id="inputNum" 
+                            name="inputNum" 
+                            placeholder = "Ej. +52 99 9381 5121">
+                    <div>
+                        <small>
+                            "No olvides agragar el código del país al número telefonico"
+                        </small>
+                    </div>
+                <!-- Escribir el mensaje que se le enviara al usuario -->
+                <div class="col-sm-6 col-sm-offset-3 form-group">
+                    <label>Texto del Mensaje: </label>
+                    <textarea class="form-control" 
+                                id="message" 
+                                v-model="message" 
+                                placeholder="Escribe un mensaje">
+                    </textarea>
+                </div>
+            </center>
+            <center>
+                <!-- Para hacer el procedimiento del mensaje -->
+                 <button type="Submit" onclick="CrearMensaje();">Enviar</button>
+            </center>
+        </div>
+    </body>
+</html>

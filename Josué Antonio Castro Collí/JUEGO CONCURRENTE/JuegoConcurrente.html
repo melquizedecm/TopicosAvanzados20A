@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- 
+******************************************************************************
+# Program Name: JuegoConcurrente.html
+# Authors: Josue Antonio Castro Collí. 
+# Description:  Programa que utiliza la programación concurrente. 
+		Carrera de corredores controlando por códigos dispuestos de forma concurrente. 
+		(Que se controlan de manera independiente). 
+# Date: 02/Mayo/2020
+#
+******************************************************************************
+-->
+<html>
+<head>
+	<!-- Libreria de este juego -->
+	<script src="Concurrent.Thread.Compiler.js" type="text/javascript"></script>
+	<script>
+			function corredor(numero, etiquetaNombre, etiqueta, img, fin) {
+				// Para que se imprima varios números en la página con un ciclo While.
+				var i = 0;
+				while (i <= fin ){
+					//Mostrar la etiqueta de los mestros que recorre. 
+					document.getElementById(etiqueta).value = parseInt (i / 1000) + " mts";
+					//Esta linea hace que el Corredor se este movimiendo
+					//El 100 que se ve es la distacia de separación del lado Izquierdo.
+					document.getElementById(img).style.paddingLeft=100 + parseInt(i/100)+"px";
+					i++;
+				}
+				//Para mostrar quien de los corredores gano, ya que no podemos saber con exactitud. 
+				nombre = document.getElementById(etiquetaNombre).value;
+				alert("Gano el Corredor " + numero + " - " + nombre);
+			}
+			function ejecutar() {
+				/*
+				display: "inline", es para mostrar la etiqueta (imagen)
+				que se puso invisible más abajo del código.
+				*/
+				document.getElementById("img1").style.display="inline";
+				document.getElementById("img2").style.display="inline";
+				document.getElementById("img3").style.display="inline";
+				// Para el llamado a la concurrencia. 
+				// Para llamar la función Corredor. 
+				Concurrent.Thread.create(corredor, 1, "inputCorredor1", "input1", "img1", 100000);
+				Concurrent.Thread.create(corredor, 2, "inputCorredor2", "input2", "img2", 100000);
+				Concurrent.Thread.create(corredor, 3, "inputCorredor3", "input3", "img3", 100000);
+			}
+	</script>
+	<title>JUEGO CONCURRENTE</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<!--La imagen del estadio donde corren los corredores -->
+	<body background="https://e00-marca.uecdn.es/multimedia/juegos-olimpicos/atletismo/2016/reglas/campo-atletismo.png" style="background-repeat: no-repeat; background-size: 100%;">
+		<!-- Para darle nombre a los corredores -->
+	<label>Nombre Corredor 1:</label>
+	<input type="text" id="inputCorredor1"/><br>
+	<label>Nombre Corredor 2:</label>
+	<input type="text" id="inputCorredor2"/><br>
+	<label>Nombre Corredor 3:</label>
+	<input type="text" id="inputCorredor3"/><br>
+	<button onclick="ejecutar();">Iniciar Carrera</button><br>
+	<br>
+	<br>
+	<div style="position: center;">
+		<!-- 
+		# display: nome, es para que desaparesca la estiqueta(imagen), basicamente está invisible
+		# Para mostrar las imagenes del Corredor.. 
+		 -->
+		<img src="https://4.bp.blogspot.com/_LLEsBeSTvp4/S8NewBduVNI/AAAAAAAACzs/YB4yzgeLfAg/s320/deatlet13.gif" width="100" style="display: none; padding-left: 400px" id="img1"><input type="text" size="7" id="input1" readonly/><br>
+		<img src="https://4.bp.blogspot.com/_LLEsBeSTvp4/S8NewBduVNI/AAAAAAAACzs/YB4yzgeLfAg/s320/deatlet13.gif" width="100" style="display: none; padding-left: 400px" id="img2"><input type="text" size="7" id="input2" readonly/><br>
+		<img src="https://4.bp.blogspot.com/_LLEsBeSTvp4/S8NewBduVNI/AAAAAAAACzs/YB4yzgeLfAg/s320/deatlet13.gif" width="100" style="display: none; padding-left: 400px" id="img3"><input type="text" size="7" id="input3" readonly/>
+	</div>
+</body>
+</html>

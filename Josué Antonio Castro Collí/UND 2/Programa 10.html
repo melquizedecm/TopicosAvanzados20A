@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<!--
+*****************************************************************************************************************************************************************************
+# Program Name: Program 10.html
+# Authors: Josue Antonio Castro Collí. 
+# Description:  Se realiza un programa de una gráfica de pastel con mis calificaciones. 
+# Date: 21/Febrero/2020
+#
+#Funciones:
+# function ( )               //consctructor que inicia la tabla.
+******************************************************************************
+*****************************************************************************
+-->
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Calificaciones Josue Antonio"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			//Aqui se introducen la información de la gráfica. 
+			{y: 98, label: "Estruvtura de datos"},
+			{y: 88, label: "Cultura Empresarial"},
+			{y: 75, label: "Física General"},
+			{y: 80, label: "Investigación de Operaciones"},
+			{y: 90, label: "Desarrollo Sustentable"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
